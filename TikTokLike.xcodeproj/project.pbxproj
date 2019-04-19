@@ -25,6 +25,13 @@
 		82B838C1226A644A004622CD /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B838C0226A644A004622CD /* Camera.storyboard */; };
 		82B838C3226A64D1004622CD /* Chats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B838C2226A64D1004622CD /* Chats.storyboard */; };
 		82B838C5226A652B004622CD /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B838C4226A652B004622CD /* Profile.storyboard */; };
+		82B838C7226A6ABE004622CD /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B838C6226A6ABE004622CD /* Authentication.storyboard */; };
+		82B838C9226A6ADC004622CD /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B838C8226A6ADC004622CD /* SignInViewController.swift */; };
+		82B838CB226A6AEF004622CD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B838CA226A6AEF004622CD /* SignUpViewController.swift */; };
+		82B838CD226A7467004622CD /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B838CC226A7467004622CD /* AuthService.swift */; };
+		82B838CF226A75B6004622CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82B838CE226A75B5004622CD /* GoogleService-Info.plist */; };
+		82B838D1226A7B99004622CD /* UIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B838D0226A7B99004622CD /* UIService.swift */; };
+		82B838D3226A81F3004622CD /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B838D2226A81F3004622CD /* AlertService.swift */; };
 		B107E857D4AFF1D4D6D46B34 /* Pods_TikTokLikeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80DA477EDCBB07DE4DF0618 /* Pods_TikTokLikeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +76,13 @@
 		82B838C0226A644A004622CD /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		82B838C2226A64D1004622CD /* Chats.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chats.storyboard; sourceTree = "<group>"; };
 		82B838C4226A652B004622CD /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		82B838C6226A6ABE004622CD /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		82B838C8226A6ADC004622CD /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		82B838CA226A6AEF004622CD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		82B838CC226A7467004622CD /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		82B838CE226A75B5004622CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		82B838D0226A7B99004622CD /* UIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIService.swift; sourceTree = "<group>"; };
+		82B838D2226A81F3004622CD /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		849842F5B2AD892E20162873 /* Pods-TikTokLike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokLike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TikTokLike/Pods-TikTokLike.debug.xcconfig"; sourceTree = "<group>"; };
 		8EB6E54C6117B8A274106BE0 /* Pods-TikTokLikeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokLikeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TikTokLikeTests/Pods-TikTokLikeTests.release.xcconfig"; sourceTree = "<group>"; };
 		9ACBF459D6A2F9428044F191 /* Pods-TikTokLikeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokLikeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TikTokLikeUITests/Pods-TikTokLikeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +167,7 @@
 				82B838B1226A5E30004622CD /* Cusstom Cells */,
 				82B83886226A5DD7004622CD /* Assets.xcassets */,
 				82B8388B226A5DD7004622CD /* Info.plist */,
+				82B838CE226A75B5004622CD /* GoogleService-Info.plist */,
 			);
 			path = TikTokLike;
 			sourceTree = "<group>";
@@ -178,6 +193,8 @@
 		82B838AD226A5DF2004622CD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				82B838C8226A6ADC004622CD /* SignInViewController.swift */,
+				82B838CA226A6AEF004622CD /* SignUpViewController.swift */,
 				82B838B2226A5F9A004622CD /* FeedViewController.swift */,
 				82B838B4226A5FE3004622CD /* SearchViewController.swift */,
 				82B838B6226A600D004622CD /* CameraViewController.swift */,
@@ -191,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				82B83888226A5DD7004622CD /* LaunchScreen.storyboard */,
+				82B838C6226A6ABE004622CD /* Authentication.storyboard */,
 				82B83883226A5DD5004622CD /* Main.storyboard */,
 				82B838BC226A6266004622CD /* Feed.storyboard */,
 				82B838BE226A62CC004622CD /* Search.storyboard */,
@@ -211,6 +229,9 @@
 		82B838B0226A5E17004622CD /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				82B838CC226A7467004622CD /* AuthService.swift */,
+				82B838D0226A7B99004622CD /* UIService.swift */,
+				82B838D2226A81F3004622CD /* AlertService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -346,6 +367,8 @@
 				82B83887226A5DD7004622CD /* Assets.xcassets in Resources */,
 				82B838BD226A6266004622CD /* Feed.storyboard in Resources */,
 				82B838C3226A64D1004622CD /* Chats.storyboard in Resources */,
+				82B838C7226A6ABE004622CD /* Authentication.storyboard in Resources */,
+				82B838CF226A75B6004622CD /* GoogleService-Info.plist in Resources */,
 				82B83885226A5DD5004622CD /* Main.storyboard in Resources */,
 				82B838BF226A62CC004622CD /* Search.storyboard in Resources */,
 			);
@@ -475,10 +498,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82B838D3226A81F3004622CD /* AlertService.swift in Sources */,
+				82B838C9226A6ADC004622CD /* SignInViewController.swift in Sources */,
 				82B838BB226A607C004622CD /* ProfileViewController.swift in Sources */,
+				82B838CB226A6AEF004622CD /* SignUpViewController.swift in Sources */,
+				82B838CD226A7467004622CD /* AuthService.swift in Sources */,
 				82B838B5226A5FE3004622CD /* SearchViewController.swift in Sources */,
 				82B838B7226A600D004622CD /* CameraViewController.swift in Sources */,
 				82B838B9226A606C004622CD /* ChatsViewController.swift in Sources */,
+				82B838D1226A7B99004622CD /* UIService.swift in Sources */,
 				82B838B3226A5F9A004622CD /* FeedViewController.swift in Sources */,
 				82B83880226A5DD5004622CD /* AppDelegate.swift in Sources */,
 			);
@@ -659,6 +687,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AQQF6U36PG;
 				INFOPLIST_FILE = TikTokLike/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -678,6 +707,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AQQF6U36PG;
 				INFOPLIST_FILE = TikTokLike/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

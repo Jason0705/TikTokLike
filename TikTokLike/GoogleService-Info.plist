@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>367344440006-5ahj8c4vk6hl1no6v6hh656lc9p632l2.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.367344440006-5ahj8c4vk6hl1no6v6hh656lc9p632l2</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAqos9c4gRd9SuQ98N94qbwIpxYSaWmE14</string>
+	<key>GCM_SENDER_ID</key>
+	<string>367344440006</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.jasondevelopment.TikTokLike</string>
+	<key>PROJECT_ID</key>
+	<string>tiktoklike-4231a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tiktoklike-4231a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:367344440006:ios:ebf65faccaf59c73</string>
+	<key>DATABASE_URL</key>
+	<string>https://tiktoklike-4231a.firebaseio.com</string>
+</dict>
+</plist>
