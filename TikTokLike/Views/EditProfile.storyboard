@@ -19,18 +19,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8M3-sM-CNs">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="730"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="gv6-a5-0bF" id="IBV-lE-eeB"/>
                                     <outlet property="delegate" destination="gv6-a5-0bF" id="xM9-jb-OcR"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4Y-YQ-KGO">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uk9-aw-f2U">
+                                        <rect key="frame" x="361" y="7" width="37" height="30"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doneButtonPressed:" destination="gv6-a5-0bF" eventType="touchUpInside" id="omF-pa-RHs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="uk9-aw-f2U" firstAttribute="top" secondItem="g4Y-YQ-KGO" secondAttribute="top" constant="7" id="NvG-Ax-KJi"/>
+                                    <constraint firstAttribute="trailing" secondItem="uk9-aw-f2U" secondAttribute="trailing" constant="16" id="l5S-Kt-mWF"/>
+                                    <constraint firstAttribute="height" constant="44" id="z12-WY-ydv"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="mHv-IY-Zla" firstAttribute="bottom" secondItem="8M3-sM-CNs" secondAttribute="bottom" id="8xG-Lh-O4E"/>
+                            <constraint firstItem="g4Y-YQ-KGO" firstAttribute="leading" secondItem="mHv-IY-Zla" secondAttribute="leading" id="1YB-ef-K18"/>
                             <constraint firstItem="8M3-sM-CNs" firstAttribute="top" secondItem="mHv-IY-Zla" secondAttribute="top" id="Bgn-TQ-9OJ"/>
+                            <constraint firstItem="mHv-IY-Zla" firstAttribute="bottom" secondItem="g4Y-YQ-KGO" secondAttribute="bottom" id="NUk-HJ-Qmy"/>
+                            <constraint firstItem="g4Y-YQ-KGO" firstAttribute="top" secondItem="8M3-sM-CNs" secondAttribute="bottom" id="OTv-RD-457"/>
+                            <constraint firstItem="mHv-IY-Zla" firstAttribute="trailing" secondItem="g4Y-YQ-KGO" secondAttribute="trailing" id="lui-Ak-94P"/>
                             <constraint firstItem="8M3-sM-CNs" firstAttribute="trailing" secondItem="mHv-IY-Zla" secondAttribute="trailing" id="pSf-9H-Qbx"/>
                             <constraint firstItem="8M3-sM-CNs" firstAttribute="leading" secondItem="mHv-IY-Zla" secondAttribute="leading" id="zlD-K6-e6q"/>
                         </constraints>
@@ -44,6 +67,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="doneButton" destination="uk9-aw-f2U" id="rhE-Vp-1Hj"/>
+                        <outlet property="doneButtonView" destination="g4Y-YQ-KGO" id="wL1-Ea-OxJ"/>
+                        <outlet property="doneButtonViewHeight" destination="z12-WY-ydv" id="lFY-y9-Aoc"/>
                         <outlet property="editProfileTableView" destination="8M3-sM-CNs" id="HuZ-Zu-FAy"/>
                     </connections>
                 </viewController>

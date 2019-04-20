@@ -9,7 +9,8 @@
 import UIKit
 
 protocol InputTableCellProtocol {
-    func cellContentReceived(content: String)
+    func infoCellContentReceived(content: String)
+    func updateTableView()
 }
 
 class InputTableCell: UITableViewCell {
@@ -48,7 +49,7 @@ class InputTableCell: UITableViewCell {
     // MARK: Functions
     
     func setUp() {
-        UIService.textViewUnderline(textView: contentTextView)
+//        UIService.textViewUnderline(textView: contentTextView)
     }
     
     
@@ -70,6 +71,7 @@ extension InputTableCell: UITextViewDelegate {
     }
     
     func textViewDidChange(_ textView: UITextView) {
-        delegate?.cellContentReceived(content: contentTextView.text)
+        delegate?.infoCellContentReceived(content: contentTextView.text)
+        delegate?.updateTableView()
     }
 }

@@ -39,6 +39,7 @@ class UserService {
                 user.profile_photo_url = dictionary["profile_photo_url"] as? String
                 
                 user.user_name = dictionary["user_name"] as? String
+                user.bio = dictionary["bio"] as? String
                 
                 user.followings = dictionary["followings"] as? [String]
                 user.followers = dictionary["followers"] as? [String]
@@ -66,6 +67,7 @@ class UserService {
                 user.profile_photo_url = dictionary["profile_photo_url"] as? String
                 
                 user.user_name = dictionary["user_name"] as? String
+                user.bio = dictionary["bio"] as? String
                 
                 user.followings = dictionary["followings"] as? [String]
                 user.followers = dictionary["followers"] as? [String]

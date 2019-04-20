@@ -13,6 +13,7 @@ class User: NSObject {
     var email: String?
     var user_name: String?
     var profile_photo_url: String?
+    var bio: String?
     var followings: [String]?
     var followers: [String]?
 }

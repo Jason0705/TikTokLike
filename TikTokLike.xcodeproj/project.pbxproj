@@ -17,6 +17,7 @@
 		827D9920226AF18600187144 /* CustomCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827D991F226AF18600187144 /* CustomCameraViewController.swift */; };
 		827D9922226AF19900187144 /* CapturePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827D9921226AF19900187144 /* CapturePreviewViewController.swift */; };
 		827D9924226AF70500187144 /* VideoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827D9923226AF70500187144 /* VideoService.swift */; };
+		827D9928226B0CE700187144 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827D9927226B0CE700187144 /* ImageService.swift */; };
 		82B83880226A5DD5004622CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B8387F226A5DD5004622CD /* AppDelegate.swift */; };
 		82B83885226A5DD5004622CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B83883226A5DD5004622CD /* Main.storyboard */; };
 		82B83887226A5DD7004622CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82B83886226A5DD7004622CD /* Assets.xcassets */; };
@@ -80,6 +81,7 @@
 		827D991F226AF18600187144 /* CustomCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraViewController.swift; sourceTree = "<group>"; };
 		827D9921226AF19900187144 /* CapturePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePreviewViewController.swift; sourceTree = "<group>"; };
 		827D9923226AF70500187144 /* VideoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoService.swift; sourceTree = "<group>"; };
+		827D9927226B0CE700187144 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		82B8387C226A5DD5004622CD /* TikTokLike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTokLike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B8387F226A5DD5004622CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82B83884226A5DD5004622CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				82B838D2226A81F3004622CD /* AlertService.swift */,
 				82B838DE226AA413004622CD /* UserService.swift */,
 				827D9923226AF70500187144 /* VideoService.swift */,
+				827D9927226B0CE700187144 /* ImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 				82B838D6226A92F4004622CD /* ProfileHeaderView.swift in Sources */,
 				827D9922226AF19900187144 /* CapturePreviewViewController.swift in Sources */,
 				82B838B9226A606C004622CD /* SocialViewController.swift in Sources */,
+				827D9928226B0CE700187144 /* ImageService.swift in Sources */,
 				82B838DF226AA413004622CD /* UserService.swift in Sources */,
 				827D9924226AF70500187144 /* VideoService.swift in Sources */,
 				827D9917226AD99E00187144 /* ImageTableCell.swift in Sources */,

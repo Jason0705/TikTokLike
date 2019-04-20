@@ -7,10 +7,24 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
+import FirebaseStorage
+import SVProgressHUD
 
 class EditProfileViewController: UIViewController {
 
     // MARK: - Constants & Variables
+    
+    struct userInfo {
+        var icon: UIImage?
+        var content: String?
+        var placeholder: String?
+    }
+    
+    var infoData = [userInfo]()
+    
+    var selectedIndexPath = IndexPath()
     
     var selectedProfilePhoto: UIImage?
     
@@ -21,6 +35,10 @@ class EditProfileViewController: UIViewController {
     // MARK: - UIOutlets
     
     @IBOutlet weak var editProfileTableView: UITableView!
+    
+    @IBOutlet weak var doneButtonView: UIView!
+    @IBOutlet weak var doneButtonViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var doneButton: UIButton!
     
     
     // MARK: - Override Functions
@@ -35,10 +53,68 @@ class EditProfileViewController: UIViewController {
         editProfileTableView.register(UINib(nibName: "ImageTableCell", bundle: nil), forCellReuseIdentifier: "imageTableCell")
         editProfileTableView.register(UINib(nibName: "InputTableCell", bundle: nil), forCellReuseIdentifier: "inputTableCell")
         
+        populateInfoData()
+        
+        setUp()
     }
     
     
     // MARK: - Functions
+    
+    // UI Set Up
+    
+    func setUp() {
+        doneButtonViewHeight.constant = 0
+        doneButton.isHidden = true
+        
+        UserService.getUserOnce(with: UserService.getCurrentUserID()) { (user, error) in
+            if error != nil {
+                print("\(error)")
+            }
+            else if user != nil {
+                
+                if let profilePhotoURL = user?.profile_photo_url {
+                    self.selectedProfilePhoto = ImageService.getImageUsingCacheWithURL(urlString: profilePhotoURL)
+                }
+                
+                if let userName = user?.user_name {
+                    self.infoData[0].content = userName
+                }
+                
+                if let bio = user?.bio {
+                    self.infoData[1].content = bio
+                }
+                
+                self.editProfileTableView.reloadData()
+            }
+        }
+    }
+    
+    func populateInfoData() {
+        infoData.removeAll()
+        infoData.append(userInfo(icon: UIImage(named: "person_outline"), content: "", placeholder: "User Name"))
+        infoData.append(userInfo(icon: UIImage(named: "edit_outline"), content: "", placeholder: "Bio"))
+    }
+    
+    func doneButtonViewState(state: Int){
+        UIView.animate(withDuration: 0.225) {
+            // close state
+            if state == 0 {
+                self.doneButtonViewHeight.constant = 0
+                self.doneButton.isHidden = true
+                self.view.endEditing(true)
+            }
+                
+                // keyboard editing state
+            else if state == 1 {
+                self.doneButtonViewHeight.constant = 258 + 44 + 44 // keyboard height + sugest text view height + visable dont button view height
+                self.doneButton.isHidden = false
+            }
+            self.view.layoutIfNeeded()
+        }
+        
+    }
+    
     
     // Pick Profile Photo
     func handleSelectProfilePhoto() {
@@ -69,10 +145,58 @@ class EditProfileViewController: UIViewController {
         present(imagePicker, animated: true, completion: nil)
     }
     
+    func saveProfile() {
+        SVProgressHUD.setDefaultMaskType(.clear)
+        SVProgressHUD.show()
+        
+        let uid = UserService.getCurrentUserID()
+        let databaseReference = Database.database().reference()
+        let storageReference = Storage.storage().reference()
+        let userReference = databaseReference.child("users").child(uid)
+        let profilePhotoReference = storageReference.child("profile_images").child("\(uid).jpg")
+        
+        if let profilePhoto = selectedProfilePhoto, let imageData = profilePhoto.jpegData(compressionQuality: 0.1) {
+            profilePhotoReference.putData(imageData, metadata: nil) { (storageMetadata, error) in
+                if error != nil { // error
+                    print("Save profile photo error: \(error!)")
+                    SVProgressHUD.showError(withStatus: "Sorry, ther has been an error. Please try again later.")
+                    SVProgressHUD.dismiss(withDelay: 2)
+                    return
+                }
+                // no error
+                profilePhotoReference.downloadURL(completion: { (url, error) in
+                    if error != nil { // error
+                        print("Get profile photo URL error: \(error!)")
+                        SVProgressHUD.showError(withStatus: "Sorry, ther has been an error. Please try again later.")
+                        SVProgressHUD.dismiss(withDelay: 2)
+                        return
+                    }
+                    // no error
+                    let profilePhotoURL = url?.absoluteString
+                    userReference.child("/profile_photo_url").setValue(profilePhotoURL)
+                })
+            }
+        }
+        
+        userReference.child("user_name").setValue(infoData[0].content)
+        userReference.child("bio").setValue(infoData[1].content)
+        
+        SVProgressHUD.showSuccess(withStatus: "Changes Saved")
+        SVProgressHUD.dismiss(withDelay: 1)
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
     // MARK: - UIActions
     
     @IBAction func saveBarButtonPressed(_ sender: UIBarButtonItem) {
+        doneButtonViewState(state: 0)
+        saveProfile()
+    }
+    
+    @IBAction func doneButtonPressed(_ sender: UIButton) {
+        doneButtonViewState(state: 0)
     }
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
@@ -102,7 +226,7 @@ extension EditProfileViewController: UITableViewDelegate, UITableViewDataSource 
             return 1
             
         case 1:
-            return 2
+            return infoData.count
             
         default:
             break
@@ -126,6 +250,19 @@ extension EditProfileViewController: UITableViewDelegate, UITableViewDataSource 
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "inputTableCell", for: indexPath) as! InputTableCell
             
+            cell.delegate = self
+            
+            cell.iconImageView.image = infoData[indexPath.row].icon
+            cell.contentTextView.text = infoData[indexPath.row].content
+            cell.placeholderLabel.text = infoData[indexPath.row].placeholder
+            
+            if !infoData[indexPath.row].content!.isEmpty {
+                cell.placeholderLabel.isHidden = true
+            }
+            else {
+                cell.placeholderLabel.isHidden = false
+            }
+            
             return cell
             
         default:
@@ -140,11 +277,15 @@ extension EditProfileViewController: UITableViewDelegate, UITableViewDataSource 
         
         tableView.deselectRow(at: indexPath, animated: true)
         
+        selectedIndexPath = indexPath
+        
         switch indexPath.section {
         case 0:
+            doneButtonViewState(state: 0)
             handleSelectProfilePhoto()
             
         case 1:
+            doneButtonViewState(state: 1)
             if let cell = editProfileTableView.cellForRow(at: indexPath) as? InputTableCell {
                 cell.contentTextView.becomeFirstResponder()
             }
@@ -169,4 +310,23 @@ extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigati
         dismiss(animated: true, completion: nil)
         editProfileTableView.reloadData()
     }
+}
+
+
+// MARK: - InputTableCell Protocol
+
+extension EditProfileViewController: InputTableCellProtocol {
+    func infoCellContentReceived(content: String) {
+        infoData[selectedIndexPath.row].content = content
+    }
+    
+    func updateTableView() {
+        UIView.setAnimationsEnabled(false)
+        editProfileTableView.beginUpdates()
+        editProfileTableView.endUpdates()
+        editProfileTableView.scrollToRow(at: selectedIndexPath, at: .bottom, animated: false)
+        UIView.setAnimationsEnabled(true)
+    }
+    
+    
 }
