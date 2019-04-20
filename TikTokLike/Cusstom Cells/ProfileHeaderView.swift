@@ -10,6 +10,8 @@ import UIKit
 
 protocol ProfileHeaderViewProtocol {
     func editProfile()
+    func followAction()
+    func unfollowAction()
 }
 
 class ProfileHeaderView: UICollectionReusableView {
@@ -55,6 +57,14 @@ class ProfileHeaderView: UICollectionReusableView {
     
     @IBAction func editProfileButtonPressed(_ sender: UIButton) {
         delegate?.editProfile()
+    }
+    
+    @IBAction func followButtonPressed(_ sender: UIButton) {
+        delegate?.followAction()
+    }
+    
+    @IBAction func unfollowButtonPressed(_ sender: UIButton) {
+        delegate?.unfollowAction()
     }
     
     

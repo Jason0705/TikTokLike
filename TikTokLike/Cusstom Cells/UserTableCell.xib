@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="userTableCell" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="UserTableCell" customModule="TikTokLike" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pr1-LK-2eI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="100.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cHE-6h-wxK">
+                                <rect key="frame" x="16" y="20.5" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="GEh-uT-aWN"/>
+                                    <constraint firstAttribute="width" constant="60" id="xE5-Fw-njG"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdL-Fs-MK2">
+                                <rect key="frame" x="92" y="38.5" width="212" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cHE-6h-wxK" firstAttribute="centerY" secondItem="pr1-LK-2eI" secondAttribute="centerY" id="37g-Cx-YKI"/>
+                            <constraint firstAttribute="height" constant="100" id="cdw-SR-8An"/>
+                            <constraint firstAttribute="trailing" secondItem="sdL-Fs-MK2" secondAttribute="trailing" constant="16" id="gdu-0a-VWA"/>
+                            <constraint firstItem="sdL-Fs-MK2" firstAttribute="centerY" secondItem="cHE-6h-wxK" secondAttribute="centerY" id="kMt-Co-Cwf"/>
+                            <constraint firstItem="sdL-Fs-MK2" firstAttribute="leading" secondItem="cHE-6h-wxK" secondAttribute="trailing" constant="16" id="oBY-O7-AEf"/>
+                            <constraint firstItem="cHE-6h-wxK" firstAttribute="leading" secondItem="pr1-LK-2eI" secondAttribute="leading" constant="16" id="uEh-oe-r41"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="pr1-LK-2eI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="G3X-Kg-TVv"/>
+                    <constraint firstAttribute="bottom" secondItem="pr1-LK-2eI" secondAttribute="bottom" id="UZp-vV-5qz"/>
+                    <constraint firstAttribute="trailing" secondItem="pr1-LK-2eI" secondAttribute="trailing" id="VGD-Xw-arr"/>
+                    <constraint firstItem="pr1-LK-2eI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="qGt-NA-zbe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="profileImageView" destination="cHE-6h-wxK" id="mTv-57-whv"/>
+                <outlet property="userNameLabel" destination="sdL-Fs-MK2" id="7M2-FD-ge5"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

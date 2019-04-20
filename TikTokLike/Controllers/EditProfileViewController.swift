@@ -242,7 +242,6 @@ extension EditProfileViewController: UITableViewDelegate, UITableViewDataSource 
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "imageTableCell", for: indexPath) as! ImageTableCell
             
-            cell.profileImageView.layer.cornerRadius = 0.5 * cell.profileImageView.frame.width
             cell.profileImageView.image = selectedProfilePhoto
             
             return cell

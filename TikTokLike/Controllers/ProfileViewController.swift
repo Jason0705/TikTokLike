@@ -137,17 +137,42 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
             
             headerView.delegate = self
             
+            if let profilePhotoURL = user.profile_photo_url {
+                headerView.profileImageView.image = ImageService.getImageUsingCacheWithURL(urlString: profilePhotoURL)
+            }
+            
             if let userName = user.user_name {
-                headerView.userNameLabel.text = userName
+                headerView.userNameLabel.text = "@\(userName)"
+            }
+            
+            if let followings = user.followings {
+                headerView.followingCountLabel.text = "\(followings.count - 1)" // - 1 because followings in FollowService is initiated with a [""] placeholder. Whenever a user first have followings, the first of followings is "".
+            }
+            if let followers = user.followers {
+                headerView.followerCountLabel.text = "\(followers.count - 1)" // - 1 because followers in FollowService is initiated with a [""] placeholder. Whenever a user first have followers, the first of followings is "".
             }
             
             if from == 0 { // from tab control, viewing self profile
-                headerView.editProfileButton.isHidden = false
-                headerView.followButton.isHidden = true
-                headerView.messageUnfollowStackView.isHidden = true
+                headerView.editProfileButton.isHidden = false // show edit profile button
+                headerView.followButton.isHidden = true // hide follow button
+                headerView.messageUnfollowStackView.isHidden = true // hide message & unfollow button
             }
             else if from == 1 { // from profile selection, viewing other's profile
-                headerView.editProfileButton.isHidden = true
+                headerView.editProfileButton.isHidden = true // hide edit profile button
+                
+                if let uid = user.uid {
+                    let following = FollowService.isFollowingUser(of: uid)
+                    
+                    if following { // following, show message & unfollow buttons
+                        headerView.followButton.isHidden = true
+                        headerView.messageUnfollowStackView.isHidden = false
+                    }
+                    else if !following { // not following, show follow button
+                        headerView.followButton.isHidden = false
+                        headerView.messageUnfollowStackView.isHidden = true
+                    }
+                }
+                
             }
             
             
@@ -182,5 +207,14 @@ extension ProfileViewController: ProfileHeaderViewProtocol {
         performSegue(withIdentifier: "profileVCToEditProfileVC", sender: nil)
     }
 
+    func followAction() {
+        FollowService.followUser(of: uid)
+        profileCollectionView.reloadData()
+    }
+    
+    func unfollowAction() {
+        FollowService.unfollowUser(of: uid)
+        profileCollectionView.reloadData()
+    }
 
 }

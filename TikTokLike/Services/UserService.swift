@@ -79,4 +79,42 @@ class UserService {
         })
     }
     
+    
+    static func getUsersExceptSelf(completion: @escaping ([User]?, Error?) -> Void) {
+        
+        var users = [User]()
+        
+        Database.database().reference().child("users").observe(.childAdded, with: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: Any] {
+                let user = User()
+                
+                user.uid = dictionary["uid"] as? String
+                user.email = dictionary["email"] as? String
+                
+                user.profile_photo_url = dictionary["profile_photo_url"] as? String
+                
+                user.user_name = dictionary["user_name"] as? String
+                user.bio = dictionary["bio"] as? String
+                
+                user.followings = dictionary["followings"] as? [String]
+                user.followers = dictionary["followers"] as? [String]
+                
+                if let uid = user.uid {
+                    if uid != UserService.getCurrentUserID() {
+                        users.append(user)
+                    }
+                }
+            }
+            
+            completion(users, nil)
+            
+            
+        }) { (error) in
+            completion(nil, error)
+        }
+        
+        
+    }
+    
 }
