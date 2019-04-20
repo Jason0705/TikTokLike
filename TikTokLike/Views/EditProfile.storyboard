@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit Profile-->
+        <scene sceneID="bSy-QD-axQ">
+            <objects>
+                <viewController storyboardIdentifier="EditProfileVC" hidesBottomBarWhenPushed="YES" id="gv6-a5-0bF" customClass="EditProfileViewController" customModule="TikTokLike" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xpH-IA-mhN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8M3-sM-CNs">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="gv6-a5-0bF" id="IBV-lE-eeB"/>
+                                    <outlet property="delegate" destination="gv6-a5-0bF" id="xM9-jb-OcR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mHv-IY-Zla" firstAttribute="bottom" secondItem="8M3-sM-CNs" secondAttribute="bottom" id="8xG-Lh-O4E"/>
+                            <constraint firstItem="8M3-sM-CNs" firstAttribute="top" secondItem="mHv-IY-Zla" secondAttribute="top" id="Bgn-TQ-9OJ"/>
+                            <constraint firstItem="8M3-sM-CNs" firstAttribute="trailing" secondItem="mHv-IY-Zla" secondAttribute="trailing" id="pSf-9H-Qbx"/>
+                            <constraint firstItem="8M3-sM-CNs" firstAttribute="leading" secondItem="mHv-IY-Zla" secondAttribute="leading" id="zlD-K6-e6q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mHv-IY-Zla"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Profile" id="g3h-K7-e9N">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="tFX-3j-Aol">
+                            <connections>
+                                <action selector="saveBarButtonPressed:" destination="gv6-a5-0bF" id="Ew9-d4-giN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="editProfileTableView" destination="8M3-sM-CNs" id="HuZ-Zu-FAy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LMl-kR-n7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947.82608695652186" y="130.58035714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Z4Q-3K-fyc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mub-nT-9Ui" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b2Q-l1-DUi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gv6-a5-0bF" kind="relationship" relationship="rootViewController" id="ysH-A1-uJt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a7J-g2-JKI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.681159420289859" y="130.58035714285714"/>
+        </scene>
+    </scenes>
+</document>

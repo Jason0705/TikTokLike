@@ -8,8 +8,16 @@
 
 import UIKit
 
+protocol ProfileHeaderViewProtocol {
+    func editProfile()
+}
+
 class ProfileHeaderView: UICollectionReusableView {
 
+    // MARK: - Constants & Variables
+    var delegate: ProfileHeaderViewProtocol?
+    
+    
     // MARK: - UIOutlets
     
     @IBOutlet weak var containerView: UIView!
@@ -41,5 +49,13 @@ class ProfileHeaderView: UICollectionReusableView {
         
         profileImageView.layer.cornerRadius = 0.5 * profileImageView.frame.width
     }
+    
+    
+    // MARK: - IBActions
+    
+    @IBAction func editProfileButtonPressed(_ sender: UIButton) {
+        delegate?.editProfile()
+    }
+    
     
 }

@@ -17,10 +17,10 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1r-nA-QZ5" userLabel="Container View">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="281.5"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="274.5"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tWt-rw-Qu0">
-                            <rect key="frame" x="16" y="16" width="288" height="249.5"/>
+                            <rect key="frame" x="16" y="16" width="288" height="242.5"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="g7i-zI-WCj">
                                     <rect key="frame" x="94" y="0.0" width="100" height="100"/>
@@ -83,43 +83,34 @@
                                         </stackView>
                                     </subviews>
                                 </stackView>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HzI-DP-rn4" userLabel="Buttons View">
-                                    <rect key="frame" x="24" y="209.5" width="240" height="40"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NO-rm-MWg">
+                                    <rect key="frame" x="102.5" y="209.5" width="83" height="33"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <state key="normal" title="Edit Profile"/>
+                                    <connections>
+                                        <action selector="editProfileButtonPressed:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="vyD-JG-MQP"/>
+                                    </connections>
+                                </button>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kj-Mm-Ccn">
+                                    <rect key="frame" x="119.5" y="242.5" width="49" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <state key="normal" title="Follow"/>
+                                </button>
+                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="QFt-0r-dn8" userLabel="Message Unfollow Stack View">
+                                    <rect key="frame" x="64" y="242.5" width="160" height="0.0"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NO-rm-MWg">
-                                            <rect key="frame" x="82.5" y="5" width="75" height="30"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <state key="normal" title="Edit Profile"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hvz-dQ-DfW">
+                                            <rect key="frame" x="0.0" y="0.0" width="69" height="0.0"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <state key="normal" title="Message"/>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kj-Mm-Ccn">
-                                            <rect key="frame" x="98" y="5" width="44" height="30"/>
-                                            <state key="normal" title="Follow"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvp-9b-XY4">
+                                            <rect key="frame" x="93" y="0.0" width="67" height="0.0"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <state key="normal" title="Unfollow"/>
                                         </button>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="QFt-0r-dn8" userLabel="Message Unfollow Stack View">
-                                            <rect key="frame" x="47" y="5" width="146" height="30"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hvz-dQ-DfW">
-                                                    <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
-                                                    <state key="normal" title="Message"/>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvp-9b-XY4">
-                                                    <rect key="frame" x="86" y="0.0" width="60" height="30"/>
-                                                    <state key="normal" title="Unfollow"/>
-                                                </button>
-                                            </subviews>
-                                        </stackView>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="40" id="4QO-xE-OoJ"/>
-                                        <constraint firstItem="8kj-Mm-Ccn" firstAttribute="centerY" secondItem="HzI-DP-rn4" secondAttribute="centerY" id="9N7-Bc-onN"/>
-                                        <constraint firstItem="QFt-0r-dn8" firstAttribute="centerX" secondItem="HzI-DP-rn4" secondAttribute="centerX" id="B7d-hM-b2i"/>
-                                        <constraint firstItem="QFt-0r-dn8" firstAttribute="centerY" secondItem="HzI-DP-rn4" secondAttribute="centerY" id="Ee7-mS-Hi4"/>
-                                        <constraint firstItem="8kj-Mm-Ccn" firstAttribute="centerX" secondItem="HzI-DP-rn4" secondAttribute="centerX" id="bSb-oi-xnh"/>
-                                        <constraint firstItem="0NO-rm-MWg" firstAttribute="centerX" secondItem="HzI-DP-rn4" secondAttribute="centerX" id="hsS-UC-mHg"/>
-                                        <constraint firstItem="0NO-rm-MWg" firstAttribute="centerY" secondItem="HzI-DP-rn4" secondAttribute="centerY" id="wUF-Lh-NCx"/>
-                                    </constraints>
-                                </view>
+                                </stackView>
                             </subviews>
                         </stackView>
                     </subviews>
@@ -129,7 +120,6 @@
                         <constraint firstItem="tWt-rw-Qu0" firstAttribute="top" secondItem="J1r-nA-QZ5" secondAttribute="top" constant="16" id="6j7-LY-lgg"/>
                         <constraint firstItem="tWt-rw-Qu0" firstAttribute="leading" secondItem="J1r-nA-QZ5" secondAttribute="leading" constant="16" id="BTq-Ib-Pyg"/>
                         <constraint firstAttribute="trailing" secondItem="tWt-rw-Qu0" secondAttribute="trailing" constant="16" id="BrI-rW-OS4"/>
-                        <constraint firstAttribute="height" constant="281.5" id="Zo9-TN-qGV"/>
                     </constraints>
                 </view>
             </subviews>

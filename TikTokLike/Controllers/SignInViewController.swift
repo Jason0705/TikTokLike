@@ -30,6 +30,8 @@ class SignInViewController: UIViewController {
 
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        
+        setUp()
     }
     
     override func viewDidAppear(_ animated: Bool) {

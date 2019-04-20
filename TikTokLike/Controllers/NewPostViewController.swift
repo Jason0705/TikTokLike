@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CameraViewController: UIViewController {
+class NewPostViewController: UIViewController {
 
     
     // MARK: - Constants & Variables

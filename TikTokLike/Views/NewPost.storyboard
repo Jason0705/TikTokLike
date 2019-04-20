@@ -10,17 +10,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Camera-->
+        <!--New Post-->
         <scene sceneID="gVU-wL-b25">
             <objects>
-                <viewController storyboardIdentifier="CameraVC" id="QNf-fK-RAU" customClass="CameraViewController" customModule="TikTokLike" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewPostVC" id="QNf-fK-RAU" customClass="NewPostViewController" customModule="TikTokLike" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hXp-Bm-bXF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="PK4-fq-nhv"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Camera" id="IY8-Ue-qHl">
+                    <navigationItem key="navigationItem" title="New Post" id="IY8-Ue-qHl">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="Hir-rh-Lnb">
                             <connections>
                                 <action selector="testBarButtonPressed:" destination="QNf-fK-RAU" id="Hv8-rb-Tpv"/>
@@ -35,7 +35,7 @@
         <!--Navigation Controller-->
         <scene sceneID="mJv-Uk-nc0">
             <objects>
-                <navigationController storyboardIdentifier="CameraNC" automaticallyAdjustsScrollViewInsets="NO" id="vvf-Ps-4Gh" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NewPostNC" automaticallyAdjustsScrollViewInsets="NO" id="vvf-Ps-4Gh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="add" selectedImage="add" id="3TH-9r-C28">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>

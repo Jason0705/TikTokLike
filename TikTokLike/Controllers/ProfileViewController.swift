@@ -10,15 +10,6 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    
-    // MARK: - UIOutlets
-    
-    @IBOutlet weak var addUserBarButton: UIBarButtonItem!
-    @IBOutlet weak var moreBarButton: UIBarButtonItem!
-    
-    @IBOutlet weak var profileCollectionView: UICollectionView!
-    
-    
     // MARK: - Constants & Variables
     let defaults = UserDefaults.standard
     
@@ -26,8 +17,16 @@ class ProfileViewController: UIViewController {
     var uid = UserService.getCurrentUserID()
     var user = User()
     
-        // for header
+    // for header
     var headerIndexPath = IndexPath()
+    
+    
+    // MARK: - UIOutlets
+    
+    @IBOutlet weak var addUserBarButton: UIBarButtonItem!
+    @IBOutlet weak var moreBarButton: UIBarButtonItem!
+    
+    @IBOutlet weak var profileCollectionView: UICollectionView!
     
     
     // MARK: - Override Functions
@@ -136,6 +135,8 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
             
             headerIndexPath = indexPath
             
+            headerView.delegate = self
+            
             if let userName = user.user_name {
                 headerView.userNameLabel.text = userName
             }
@@ -170,6 +171,16 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         return CGSize(width: collectionView.frame.width, height: 1)
     }
     
-    
-    
+}
+
+
+// MARK: - ProfileHeaderView Protocol
+
+extension ProfileViewController: ProfileHeaderViewProtocol {
+
+    func editProfile() {
+        performSegue(withIdentifier: "profileVCToEditProfileVC", sender: nil)
+    }
+
+
 }

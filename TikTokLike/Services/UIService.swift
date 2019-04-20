@@ -19,6 +19,14 @@ class UIService {
         textField.layer.addSublayer(bottomLayer)
     }
     
+    static func textViewUnderline(textView: UITextView) {
+        textView.backgroundColor = UIColor.clear
+        let bottomLayer = CALayer()
+        bottomLayer.frame = CGRect(x: 0, y: textView.frame.height - 1, width: textView.frame.width, height: 0.6)
+        bottomLayer.backgroundColor = UIColor.gray.cgColor
+        textView.layer.addSublayer(bottomLayer)
+    }
+    
     
     static func threeCellPerRowStyle(view: UIView, lineSpacing: CGFloat, itemSpacing: CGFloat, inset: CGFloat, heightMultiplier: CGFloat) -> UICollectionViewFlowLayout {
         let cellWidth = (view.frame.size.width - (inset * 2) - (itemSpacing * 2)) / 3

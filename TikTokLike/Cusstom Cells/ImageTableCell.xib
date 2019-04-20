@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="imageTableCell" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ImageTableCell" customModule="TikTokLike" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="132"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="131.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sYA-q5-exr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="131.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZAx-fK-Zxs">
+                                <rect key="frame" x="110" y="16" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="D6e-0n-GfC"/>
+                                    <constraint firstAttribute="height" constant="100" id="thR-4o-YVX"/>
+                                    <constraint firstAttribute="width" secondItem="ZAx-fK-Zxs" secondAttribute="height" multiplier="1:1" id="zlD-T2-Cbg"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera_outline" translatesAutoresizingMaskIntoConstraints="NO" id="yxp-fU-kwe">
+                                <rect key="frame" x="135" y="41" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Npj-Tq-IVf"/>
+                                    <constraint firstAttribute="width" secondItem="yxp-fU-kwe" secondAttribute="height" multiplier="1:1" id="R1Q-8I-qQp"/>
+                                    <constraint firstAttribute="width" constant="50" id="fBz-BF-ZOw"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZAx-fK-Zxs" firstAttribute="centerX" secondItem="sYA-q5-exr" secondAttribute="centerX" id="2th-CW-j8e"/>
+                            <constraint firstItem="yxp-fU-kwe" firstAttribute="centerX" secondItem="ZAx-fK-Zxs" secondAttribute="centerX" id="GjQ-2G-SDJ"/>
+                            <constraint firstItem="ZAx-fK-Zxs" firstAttribute="centerY" secondItem="sYA-q5-exr" secondAttribute="centerY" id="KIa-fI-u73"/>
+                            <constraint firstAttribute="height" constant="131.5" id="NU5-e3-IQK"/>
+                            <constraint firstItem="yxp-fU-kwe" firstAttribute="centerY" secondItem="ZAx-fK-Zxs" secondAttribute="centerY" id="Wwd-fO-XKv"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="sYA-q5-exr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="g2V-Kq-D4n"/>
+                    <constraint firstAttribute="bottom" secondItem="sYA-q5-exr" secondAttribute="bottom" id="n4A-cv-eez"/>
+                    <constraint firstAttribute="trailing" secondItem="sYA-q5-exr" secondAttribute="trailing" id="vma-DA-KEG"/>
+                    <constraint firstItem="sYA-q5-exr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="wlr-hR-ISs"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="profileImageView" destination="ZAx-fK-Zxs" id="igt-NE-HHP"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="camera_outline" width="72" height="72"/>
+    </resources>
+</document>

@@ -12,7 +12,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="r8p-Su-W3k">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ISJ-VI-MwP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController storyboardIdentifier="MainTBC" automaticallyAdjustsScrollViewInsets="NO" id="fg8-Of-ZRB" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="e4A-ke-RmF">
@@ -28,56 +27,57 @@
                         <segue destination="fnC-KG-pCx" kind="relationship" relationship="viewControllers" id="1W4-Pg-DTb"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ISJ-VI-MwP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-481" y="972"/>
         </scene>
         <!--FeedNC-->
         <scene sceneID="r6k-16-LCL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6rm-fG-XYB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Feed" referencedIdentifier="FeedNC" id="gtp-Ph-bcx" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="pIz-UA-kzV"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6rm-fG-XYB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="477" y="680"/>
         </scene>
         <!--SearchNC-->
         <scene sceneID="rqi-VJ-i4z">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9rA-FV-9fK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Search" referencedIdentifier="SearchNC" id="H8z-h6-gaU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="dv9-E6-78c"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9rA-FV-9fK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="486" y="827"/>
         </scene>
-        <!--CameraNC-->
+        <!--NewPostNC-->
         <scene sceneID="YJQ-vW-efP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HQl-wT-A7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewControllerPlaceholder storyboardName="Camera" referencedIdentifier="CameraNC" id="mcG-y1-AUz" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="NewPost" referencedIdentifier="NewPostNC" id="mcG-y1-AUz" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Aqi-M1-aAc"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HQl-wT-A7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="489" y="972"/>
         </scene>
         <!--SocialNC-->
         <scene sceneID="fa3-ch-DEz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ndh-LA-sGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Social" referencedIdentifier="SocialNC" id="VZP-Zq-ing" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="YOb-wh-jjW"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ndh-LA-sGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="481" y="1117"/>
         </scene>
         <!--ProfileNC-->
         <scene sceneID="kL1-Dr-NjH">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UVp-Qe-XPc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="ProfileNC" id="fnC-KG-pCx" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="iqz-2m-R7I"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UVp-Qe-XPc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="484" y="1263"/>
         </scene>
