@@ -1,5 +1,5 @@
 //
-//  SearchViewController.swift
+//  ChatsViewController.swift
 //  TikTokLike
 //
 //  Created by Jason Li on 2019-04-19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SocialViewController: UIViewController {
 
     
     // MARK: - Constants & Variables
@@ -22,10 +22,11 @@ class SearchViewController: UIViewController {
 
     }
     
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        defaults.set(1, forKey: "SelectedTabBar") // set last selected tab to 1
+        defaults.set(3, forKey: "SelectedTabBar") // set last selected tab to 3
     }
-    
+
 
 }

@@ -20,7 +20,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="PK4-fq-nhv"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Camera" id="IY8-Ue-qHl"/>
+                    <navigationItem key="navigationItem" title="Camera" id="IY8-Ue-qHl">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="Hir-rh-Lnb">
+                            <connections>
+                                <action selector="testBarButtonPressed:" destination="QNf-fK-RAU" id="Hv8-rb-Tpv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qw9-6s-Zgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

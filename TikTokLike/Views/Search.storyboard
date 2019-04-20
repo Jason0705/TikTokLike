@@ -30,7 +30,7 @@
         <scene sceneID="hcZ-yT-hfx">
             <objects>
                 <navigationController storyboardIdentifier="SearchNC" automaticallyAdjustsScrollViewInsets="NO" id="eIh-Sa-qhR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Search" selectedImage="Search" id="YQ9-Y0-yOC">
+                    <tabBarItem key="tabBarItem" title="" image="search" selectedImage="search" id="YQ9-Y0-yOC">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -49,6 +49,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Search" width="75" height="75"/>
+        <image name="search" width="75" height="75"/>
     </resources>
 </document>

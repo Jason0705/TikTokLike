@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="82R-n7-s7c">
+            <objects>
+                <viewController storyboardIdentifier="MenuVC" hidesBottomBarWhenPushed="YES" id="nvQ-H6-dae" customClass="MenuViewController" customModule="TikTokLike" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gd0-qS-jg7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3kX-fi-9Fn" userLabel="Top Line View">
+                                <rect key="frame" x="1" y="88" width="413" height="1"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="l5a-Zm-4eO"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7RK-Wg-CFh" userLabel="Bottom Line View">
+                                <rect key="frame" x="0.0" y="812" width="414" height="1"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="9Wg-Nn-Q81"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FwY-49-7hj" userLabel="Left Line View">
+                                <rect key="frame" x="0.0" y="0.0" width="1" height="896"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="ftD-iG-oef"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1Y-Ej-4Vr">
+                                <rect key="frame" x="179.5" y="821" width="55" height="30"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutButtonPressed:" destination="nvQ-H6-dae" eventType="touchUpInside" id="M38-mH-3GU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7RK-Wg-CFh" firstAttribute="leading" secondItem="KiM-fF-27X" secondAttribute="leading" id="08s-VW-ySb"/>
+                            <constraint firstItem="FwY-49-7hj" firstAttribute="leading" secondItem="KiM-fF-27X" secondAttribute="leading" id="5eY-cI-nW9"/>
+                            <constraint firstAttribute="bottom" secondItem="7RK-Wg-CFh" secondAttribute="bottom" constant="83" id="8eC-df-QrQ"/>
+                            <constraint firstAttribute="bottom" secondItem="FwY-49-7hj" secondAttribute="bottom" id="E4V-9r-ENQ"/>
+                            <constraint firstItem="KiM-fF-27X" firstAttribute="trailing" secondItem="7RK-Wg-CFh" secondAttribute="trailing" id="Ivs-nf-xzN"/>
+                            <constraint firstItem="C1Y-Ej-4Vr" firstAttribute="top" secondItem="7RK-Wg-CFh" secondAttribute="bottom" constant="8" id="SO4-nw-Udc"/>
+                            <constraint firstItem="3kX-fi-9Fn" firstAttribute="leading" secondItem="FwY-49-7hj" secondAttribute="trailing" id="gOl-ue-qA9"/>
+                            <constraint firstItem="3kX-fi-9Fn" firstAttribute="top" secondItem="Gd0-qS-jg7" secondAttribute="top" constant="88" id="mcS-98-pYe"/>
+                            <constraint firstItem="KiM-fF-27X" firstAttribute="trailing" secondItem="3kX-fi-9Fn" secondAttribute="trailing" id="nej-uf-yBh"/>
+                            <constraint firstItem="C1Y-Ej-4Vr" firstAttribute="centerX" secondItem="Gd0-qS-jg7" secondAttribute="centerX" id="njj-o5-w1v"/>
+                            <constraint firstItem="FwY-49-7hj" firstAttribute="top" secondItem="Gd0-qS-jg7" secondAttribute="top" id="puL-ql-tAN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KiM-fF-27X"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FHX-gP-nbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-192" y="5"/>
+        </scene>
+    </scenes>
+</document>

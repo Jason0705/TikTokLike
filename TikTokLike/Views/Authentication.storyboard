@@ -13,7 +13,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="Zf2-Na-3Na">
             <objects>
-                <viewController id="dAV-CU-Z03" customClass="SignInViewController" customModule="TikTokLike" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInVC" id="dAV-CU-Z03" customClass="SignInViewController" customModule="TikTokLike" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eEb-QJ-nef">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,7 +123,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="oGl-zt-19C">
             <objects>
-                <viewController id="cYa-lm-O36" customClass="SignUpViewController" customModule="TikTokLike" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpVC" id="cYa-lm-O36" customClass="SignUpViewController" customModule="TikTokLike" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zuw-V9-3zK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

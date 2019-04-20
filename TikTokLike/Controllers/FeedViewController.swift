@@ -11,15 +11,22 @@ import FirebaseAuth
 
 class FeedViewController: UIViewController {
 
-    @IBOutlet weak var testLabel: UILabel!
+    
+    // MARK: - Constants & Variables
+    let defaults = UserDefaults.standard
+    
+    
+    // MARK: Override Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let user = Auth.auth().currentUser {
-            testLabel.text = user.uid
-        }
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        defaults.set(0, forKey: "SelectedTabBar") // set last selected tab to 0
     }
     
     

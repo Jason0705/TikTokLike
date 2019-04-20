@@ -24,7 +24,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var toSignInButton: UIButton!
     
     
-    // MARK: - View Did Load
+    // MARK: Override Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +33,6 @@ class SignUpViewController: UIViewController {
         passwordTextField.delegate = self
         confirmPasswordTextField.delegate = self
     }
-    
-    
-    // MARK: - Override Functions
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true) // remove keyboard

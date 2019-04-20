@@ -23,7 +23,7 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var toSignUpButton: UIButton!
     
     
-    // MARK: - View Did Load
+    // MARK: Override Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +36,6 @@ class SignInViewController: UIViewController {
         super.viewDidAppear(animated)
         AuthService.autoSignIn()
     }
-    
-
-    // MARK: Override Functions
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true) // remove keyboard

@@ -10,17 +10,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Chats-->
+        <!--Social-->
         <scene sceneID="Zym-KS-YaQ">
             <objects>
-                <viewController storyboardIdentifier="ChatsVC" id="WmE-BD-1X3" customClass="ChatsViewController" customModule="TikTokLike" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SocialVC" id="WmE-BD-1X3" customClass="ChatsViewController" customModule="TikTokLike" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WYY-8I-Ha1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="sCa-WQ-uVR"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Chats" id="25B-Kf-3ds"/>
+                    <navigationItem key="navigationItem" title="Social" id="25B-Kf-3ds"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOQ-AI-QAu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -29,7 +29,7 @@
         <!--Navigation Controller-->
         <scene sceneID="hbM-GA-wv2">
             <objects>
-                <navigationController storyboardIdentifier="ChatsNC" automaticallyAdjustsScrollViewInsets="NO" id="pzb-ko-Gnc" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SocialNC" automaticallyAdjustsScrollViewInsets="NO" id="pzb-ko-Gnc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="chat" selectedImage="chat" id="4Ei-I9-BcO">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
