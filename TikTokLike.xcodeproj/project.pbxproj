@@ -23,6 +23,11 @@
 		827D992F226BAFA100187144 /* UserTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827D992D226BAFA100187144 /* UserTableCell.swift */; };
 		827D9930226BAFA100187144 /* UserTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 827D992E226BAFA100187144 /* UserTableCell.xib */; };
 		827D9932226BC13400187144 /* FollowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827D9931226BC13400187144 /* FollowService.swift */; };
+		827D9934226BD13B00187144 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827D9933226BD13B00187144 /* NewPostViewController.swift */; };
+		827D9937226BD42500187144 /* VideoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827D9935226BD42500187144 /* VideoTableCell.swift */; };
+		827D9938226BD42500187144 /* VideoTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 827D9936226BD42500187144 /* VideoTableCell.xib */; };
+		827D993A226BD72500187144 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827D9939226BD72500187144 /* PostService.swift */; };
+		827D993C226BD75200187144 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827D993B226BD75200187144 /* Post.swift */; };
 		82B83880226A5DD5004622CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B8387F226A5DD5004622CD /* AppDelegate.swift */; };
 		82B83885226A5DD5004622CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B83883226A5DD5004622CD /* Main.storyboard */; };
 		82B83887226A5DD7004622CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82B83886226A5DD7004622CD /* Assets.xcassets */; };
@@ -31,7 +36,7 @@
 		82B838A0226A5DD7004622CD /* TikTokLikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B8389F226A5DD7004622CD /* TikTokLikeUITests.swift */; };
 		82B838B3226A5F9A004622CD /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B838B2226A5F9A004622CD /* FeedViewController.swift */; };
 		82B838B5226A5FE3004622CD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B838B4226A5FE3004622CD /* SearchViewController.swift */; };
-		82B838B7226A600D004622CD /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B838B6226A600D004622CD /* NewPostViewController.swift */; };
+		82B838B7226A600D004622CD /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B838B6226A600D004622CD /* NewViewController.swift */; };
 		82B838B9226A606C004622CD /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B838B8226A606C004622CD /* SocialViewController.swift */; };
 		82B838BB226A607C004622CD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B838BA226A607C004622CD /* ProfileViewController.swift */; };
 		82B838BD226A6266004622CD /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B838BC226A6266004622CD /* Feed.storyboard */; };
@@ -92,6 +97,11 @@
 		827D992D226BAFA100187144 /* UserTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableCell.swift; sourceTree = "<group>"; };
 		827D992E226BAFA100187144 /* UserTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableCell.xib; sourceTree = "<group>"; };
 		827D9931226BC13400187144 /* FollowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowService.swift; sourceTree = "<group>"; };
+		827D9933226BD13B00187144 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
+		827D9935226BD42500187144 /* VideoTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableCell.swift; sourceTree = "<group>"; };
+		827D9936226BD42500187144 /* VideoTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTableCell.xib; sourceTree = "<group>"; };
+		827D9939226BD72500187144 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		827D993B226BD75200187144 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		82B8387C226A5DD5004622CD /* TikTokLike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTokLike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B8387F226A5DD5004622CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82B83884226A5DD5004622CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,7 +116,7 @@
 		82B838A1226A5DD7004622CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82B838B2226A5F9A004622CD /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		82B838B4226A5FE3004622CD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		82B838B6226A600D004622CD /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
+		82B838B6226A600D004622CD /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		82B838B8226A606C004622CD /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		82B838BA226A607C004622CD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		82B838BC226A6266004622CD /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
@@ -245,7 +255,8 @@
 				82B838CA226A6AEF004622CD /* SignUpViewController.swift */,
 				82B838B2226A5F9A004622CD /* FeedViewController.swift */,
 				82B838B4226A5FE3004622CD /* SearchViewController.swift */,
-				82B838B6226A600D004622CD /* NewPostViewController.swift */,
+				82B838B6226A600D004622CD /* NewViewController.swift */,
+				827D9933226BD13B00187144 /* NewPostViewController.swift */,
 				82B838B8226A606C004622CD /* SocialViewController.swift */,
 				82B838BA226A607C004622CD /* ProfileViewController.swift */,
 				82B838E4226ABC5A004622CD /* MenuViewController.swift */,
@@ -280,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				82B838DC226AA1BE004622CD /* User.swift */,
+				827D993B226BD75200187144 /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -294,6 +306,7 @@
 				827D9923226AF70500187144 /* VideoService.swift */,
 				827D9927226B0CE700187144 /* ImageService.swift */,
 				827D9931226BC13400187144 /* FollowService.swift */,
+				827D9939226BD72500187144 /* PostService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -311,6 +324,8 @@
 				827D991A226AD9BB00187144 /* InputTableCell.xib */,
 				827D992D226BAFA100187144 /* UserTableCell.swift */,
 				827D992E226BAFA100187144 /* UserTableCell.xib */,
+				827D9935226BD42500187144 /* VideoTableCell.swift */,
+				827D9936226BD42500187144 /* VideoTableCell.xib */,
 			);
 			path = "Cusstom Cells";
 			sourceTree = "<group>";
@@ -447,6 +462,7 @@
 				827D991E226AF12100187144 /* CustomCamera.storyboard in Resources */,
 				82B838C3226A64D1004622CD /* Social.storyboard in Resources */,
 				827D991C226AD9BB00187144 /* InputTableCell.xib in Resources */,
+				827D9938226BD42500187144 /* VideoTableCell.xib in Resources */,
 				82B838C7226A6ABE004622CD /* Authentication.storyboard in Resources */,
 				82B838CF226A75B6004622CD /* GoogleService-Info.plist in Resources */,
 				82B83885226A5DD5004622CD /* Main.storyboard in Resources */,
@@ -588,20 +604,24 @@
 				82B838CB226A6AEF004622CD /* SignUpViewController.swift in Sources */,
 				82B838CD226A7467004622CD /* AuthService.swift in Sources */,
 				827D9920226AF18600187144 /* CustomCameraViewController.swift in Sources */,
+				827D993C226BD75200187144 /* Post.swift in Sources */,
 				82B838DD226AA1BE004622CD /* User.swift in Sources */,
 				82B838B5226A5FE3004622CD /* SearchViewController.swift in Sources */,
-				82B838B7226A600D004622CD /* NewPostViewController.swift in Sources */,
+				82B838B7226A600D004622CD /* NewViewController.swift in Sources */,
 				82B838E9226ACB95004622CD /* EditProfileViewController.swift in Sources */,
 				827D992C226BAE5700187144 /* AddUserViewController.swift in Sources */,
 				827D9932226BC13400187144 /* FollowService.swift in Sources */,
 				82B838D6226A92F4004622CD /* ProfileHeaderView.swift in Sources */,
 				827D9922226AF19900187144 /* CapturePreviewViewController.swift in Sources */,
 				82B838B9226A606C004622CD /* SocialViewController.swift in Sources */,
+				827D9937226BD42500187144 /* VideoTableCell.swift in Sources */,
 				827D9928226B0CE700187144 /* ImageService.swift in Sources */,
+				827D993A226BD72500187144 /* PostService.swift in Sources */,
 				82B838DF226AA413004622CD /* UserService.swift in Sources */,
 				827D992F226BAFA100187144 /* UserTableCell.swift in Sources */,
 				827D9924226AF70500187144 /* VideoService.swift in Sources */,
 				827D9917226AD99E00187144 /* ImageTableCell.swift in Sources */,
+				827D9934226BD13B00187144 /* NewPostViewController.swift in Sources */,
 				82B838D1226A7B99004622CD /* UIService.swift in Sources */,
 				82B838B3226A5F9A004622CD /* FeedViewController.swift in Sources */,
 				82B83880226A5DD5004622CD /* AppDelegate.swift in Sources */,

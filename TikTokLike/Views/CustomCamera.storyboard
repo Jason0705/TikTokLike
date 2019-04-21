@@ -13,7 +13,7 @@
         <!--Custom Camera View Controller-->
         <scene sceneID="hx1-70-c5T">
             <objects>
-                <viewController storyboardIdentifier="CustomCameraVC" id="v5M-Io-77P" customClass="CustomCameraViewController" customModule="Passion_Fruit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CustomCameraVC" id="v5M-Io-77P" customClass="CustomCameraViewController" customModule="TikTokLike" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="exE-y3-iHo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,7 +172,7 @@
                         <outlet property="flashModeStackView" destination="N5Q-YT-Pzy" id="ybC-qW-jJk"/>
                         <outlet property="locateButton" destination="PZH-XE-gfU" id="9ry-Zc-dX6"/>
                         <outlet property="switchCameraButton" destination="ve7-B6-giH" id="2c8-ZK-jHI"/>
-                        <segue destination="aFh-ym-P1x" kind="show" identifier="customCameraToCapturePreviewVC" id="5f7-Lu-IiW"/>
+                        <segue destination="aFh-ym-P1x" kind="show" identifier="customCameraVCToCapturePreviewVC" id="5f7-Lu-IiW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLt-tR-ecX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -182,7 +182,7 @@
         <!--Capture Preview View Controller-->
         <scene sceneID="Ap6-ui-yZX">
             <objects>
-                <viewController id="aFh-ym-P1x" customClass="CapturePreviewViewController" customModule="Passion_Fruit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aFh-ym-P1x" customClass="CapturePreviewViewController" customModule="TikTokLike" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vlJ-Oj-W2Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -271,12 +271,21 @@
                         <outlet property="previewImageView" destination="3Wz-DT-mUk" id="BhE-Wn-lMj"/>
                         <outlet property="previewView" destination="0pc-Ps-BiI" id="QU9-J5-bhM"/>
                         <segue destination="L5x-d6-UGi" kind="unwind" identifier="unwind" unwindAction="unwind:" id="2sn-HR-gpl"/>
+                        <segue destination="neb-Ri-bHb" kind="show" identifier="capturePreviewVCToNewPostVC" id="OKB-hO-WRQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="19I-wi-NCx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="L5x-d6-UGi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1124" y="91"/>
+        </scene>
+        <!--NewPostVC-->
+        <scene sceneID="OSX-ON-ICY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewPost" referencedIdentifier="NewPostVC" id="neb-Ri-bHb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hHV-bU-teI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1922" y="90"/>
         </scene>
     </scenes>
     <resources>

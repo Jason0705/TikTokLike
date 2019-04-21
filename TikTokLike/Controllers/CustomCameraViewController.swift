@@ -17,7 +17,7 @@ class CustomCameraViewController: UIViewController {
     let defaults = UserDefaults.standard
     let cameraManager = CameraManager()
     
-    var from = 0 // 0: from EditProfileVC, 1: from NewPostVC
+    var from = 0 // 0: from EditProfileVC, 1: from NewVC
     var captureMode = 0 // 0: picture, 1: video
     
     var myPhoto: UIImage?
@@ -49,7 +49,7 @@ class CustomCameraViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "customCameraToCapturePreviewVC" {
+        if segue.identifier == "customCameraVCToCapturePreviewVC" {
             let destinationVC = segue.destination as! CapturePreviewViewController
             destinationVC.from = from
             destinationVC.photo = myPhoto
@@ -66,10 +66,11 @@ class CustomCameraViewController: UIViewController {
     // MARK: - Functions
     
     func setUp() {
+        changeCaptureMode(to: captureMode)
         changeFlashMode(to: defaults.integer(forKey: "CameraFlashMode"))
         cameraManager.addPreviewLayerToView(cameraView)
         cameraManager.shouldFlipFrontCameraImage = true
-        changeCaptureMode(to: captureMode)
+        
     }
     
     
@@ -148,7 +149,7 @@ class CustomCameraViewController: UIViewController {
                 }
                 self.myPhoto = image
                 self.myVideoURL = nil
-                self.performSegue(withIdentifier: "customCameraToCapturePreviewVC", sender: self)
+                self.performSegue(withIdentifier: "customCameraVCToCapturePreviewVC", sender: self)
             }
         }
         else if captureMode == 1 { // video mode
@@ -162,7 +163,7 @@ class CustomCameraViewController: UIViewController {
                 cameraManager.stopVideoRecording { (url, error) in
                     self.myVideoURL = url
                     self.myPhoto = nil
-                    self.performSegue(withIdentifier: "customCameraToCapturePreviewVC", sender: self)
+                    self.performSegue(withIdentifier: "customCameraVCToCapturePreviewVC", sender: self)
                 }
                 captureButton.setImage(UIImage(named: "record_filled"), for: .normal)
             }

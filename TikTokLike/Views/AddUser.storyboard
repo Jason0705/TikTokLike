@@ -13,7 +13,7 @@
         <!--Users-->
         <scene sceneID="n3e-E3-W6h">
             <objects>
-                <viewController storyboardIdentifier="AddUserVC" id="Pf1-TX-K1y" customClass="AddUserViewController" customModule="TikTokLike" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddUserVC" hidesBottomBarWhenPushed="YES" id="Pf1-TX-K1y" customClass="AddUserViewController" customModule="TikTokLike" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mrl-Gc-E0b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

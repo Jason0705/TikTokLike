@@ -135,6 +135,7 @@ class EditProfileViewController: UIViewController {
     func openCamera() {
         let storyboard = UIStoryboard(name: "CustomCamera", bundle: nil)
         let customCameraVC = storyboard.instantiateViewController(withIdentifier: "CustomCameraVC") as! CustomCameraViewController
+        customCameraVC.from = 0
         customCameraVC.captureMode = 0
         self.present(customCameraVC, animated: true, completion: nil)
     }

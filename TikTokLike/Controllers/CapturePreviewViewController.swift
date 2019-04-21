@@ -13,7 +13,7 @@ class CapturePreviewViewController: UIViewController {
     
     // MARK: - Variables
     
-    var from = 0 // 0: from EditProfileVC, 1: from NewPostVC
+    var from = 0 // 0: from EditProfileVC, 1: from NewVC
     
     var photo: UIImage!
     var videoURL: URL!
@@ -41,6 +41,13 @@ class CapturePreviewViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         playControl()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "capturePreviewVCToNewPostVC" {
+            let destinationVC = segue.destination as! NewPostViewController
+            destinationVC.selectedVideoURL = videoURL
+        }
     }
     
     // MARK: - Functions
@@ -114,7 +121,7 @@ class CapturePreviewViewController: UIViewController {
             performSegue(withIdentifier: "unwind", sender: nil)
         }
         else if from == 1 {
-            
+            performSegue(withIdentifier: "capturePreviewVCToNewPostVC", sender: self)
         }
         
         //        presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)

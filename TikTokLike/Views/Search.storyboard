@@ -17,7 +17,42 @@
                     <view key="view" contentMode="scaleToFill" id="kc8-uh-WqJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="fgP-GH-OoE">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0J1-xF-7D3">
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RUu-yj-7k0">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FVV-mn-YtR">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fgP-GH-OoE" firstAttribute="leading" secondItem="EkL-37-2gd" secondAttribute="leading" id="0LY-Ke-VAa"/>
+                            <constraint firstItem="EkL-37-2gd" firstAttribute="trailing" secondItem="0J1-xF-7D3" secondAttribute="trailing" id="CF4-4P-hGK"/>
+                            <constraint firstItem="0J1-xF-7D3" firstAttribute="top" secondItem="fgP-GH-OoE" secondAttribute="bottom" id="OWs-ra-NdE"/>
+                            <constraint firstItem="fgP-GH-OoE" firstAttribute="trailing" secondItem="EkL-37-2gd" secondAttribute="trailing" id="b9f-nh-2cz"/>
+                            <constraint firstItem="EkL-37-2gd" firstAttribute="bottom" secondItem="0J1-xF-7D3" secondAttribute="bottom" id="h7t-iy-BAU"/>
+                            <constraint firstItem="0J1-xF-7D3" firstAttribute="leading" secondItem="EkL-37-2gd" secondAttribute="leading" id="lTi-vn-AA5"/>
+                            <constraint firstItem="fgP-GH-OoE" firstAttribute="top" secondItem="EkL-37-2gd" secondAttribute="top" id="mOH-UE-Eix"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EkL-37-2gd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="y3u-2V-M7Q"/>

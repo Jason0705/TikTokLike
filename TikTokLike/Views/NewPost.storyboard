@@ -10,23 +10,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--New Post-->
+        <!--New View Controller-->
         <scene sceneID="gVU-wL-b25">
             <objects>
-                <viewController storyboardIdentifier="NewPostVC" id="QNf-fK-RAU" customClass="NewPostViewController" customModule="TikTokLike" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewVC" id="QNf-fK-RAU" customClass="NewViewController" customModule="TikTokLike" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hXp-Bm-bXF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="PK4-fq-nhv"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New Post" id="IY8-Ue-qHl">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Hir-rh-Lnb">
-                            <connections>
-                                <action selector="testBarButtonPressed:" destination="QNf-fK-RAU" id="Hv8-rb-Tpv"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="IY8-Ue-qHl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qw9-6s-Zgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -35,7 +29,7 @@
         <!--Navigation Controller-->
         <scene sceneID="mJv-Uk-nc0">
             <objects>
-                <navigationController storyboardIdentifier="NewPostNC" automaticallyAdjustsScrollViewInsets="NO" id="vvf-Ps-4Gh" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NewNC" automaticallyAdjustsScrollViewInsets="NO" id="vvf-Ps-4Gh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="add" selectedImage="add" id="3TH-9r-C28">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
@@ -52,6 +46,86 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BlA-4n-DAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1126.0869565217392" y="972.32142857142856"/>
+        </scene>
+        <!--New Post View Controller-->
+        <scene sceneID="kUt-Y3-OsU">
+            <objects>
+                <viewController storyboardIdentifier="NewPostVC" hidesBottomBarWhenPushed="YES" id="h0d-7i-0tf" customClass="NewPostViewController" customModule="TikTokLike" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Shq-Hp-ZHR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxU-up-ynT" userLabel="Done Button View">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfk-uU-WjI">
+                                        <rect key="frame" x="361" y="7" width="37" height="30"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doneButtonPressed:" destination="h0d-7i-0tf" eventType="touchUpInside" id="gUT-82-pe5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="FEn-ej-gcl"/>
+                                    <constraint firstItem="Qfk-uU-WjI" firstAttribute="top" secondItem="gxU-up-ynT" secondAttribute="top" constant="7" id="d1k-hf-yGf"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qfk-uU-WjI" secondAttribute="trailing" constant="16" id="oGw-b6-nFu"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eHA-Ua-6PO">
+                                <rect key="frame" x="0.0" y="88" width="414" height="730"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="h0d-7i-0tf" id="msz-LP-965"/>
+                                    <outlet property="delegate" destination="h0d-7i-0tf" id="GN5-Oa-iRD"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QC4-In-Dhr">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="New Post" id="crf-3f-3kP">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="ueu-zP-aoW">
+                                            <connections>
+                                                <action selector="cancelBarButton:" destination="h0d-7i-0tf" id="NXg-cL-wAE"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Share" id="4zV-0y-0dI">
+                                            <connections>
+                                                <action selector="shareBarButtonPressed:" destination="h0d-7i-0tf" id="c8m-ps-Icd"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gxU-up-ynT" firstAttribute="trailing" secondItem="BbM-0G-n6X" secondAttribute="trailing" id="2zB-Me-mh2"/>
+                            <constraint firstItem="QC4-In-Dhr" firstAttribute="leading" secondItem="BbM-0G-n6X" secondAttribute="leading" id="7la-y4-D2U"/>
+                            <constraint firstItem="gxU-up-ynT" firstAttribute="top" secondItem="eHA-Ua-6PO" secondAttribute="bottom" id="ALX-0R-tBM"/>
+                            <constraint firstItem="eHA-Ua-6PO" firstAttribute="leading" secondItem="BbM-0G-n6X" secondAttribute="leading" id="LM1-7V-LsV"/>
+                            <constraint firstItem="gxU-up-ynT" firstAttribute="bottom" secondItem="BbM-0G-n6X" secondAttribute="bottom" id="LgT-nr-mXf"/>
+                            <constraint firstItem="eHA-Ua-6PO" firstAttribute="top" secondItem="QC4-In-Dhr" secondAttribute="bottom" id="VIJ-RK-dZX"/>
+                            <constraint firstItem="QC4-In-Dhr" firstAttribute="trailing" secondItem="BbM-0G-n6X" secondAttribute="trailing" id="bmx-bE-d18"/>
+                            <constraint firstItem="eHA-Ua-6PO" firstAttribute="trailing" secondItem="BbM-0G-n6X" secondAttribute="trailing" id="kLc-QF-jxn"/>
+                            <constraint firstItem="gxU-up-ynT" firstAttribute="leading" secondItem="BbM-0G-n6X" secondAttribute="leading" id="mEl-e6-pcc"/>
+                            <constraint firstItem="QC4-In-Dhr" firstAttribute="top" secondItem="BbM-0G-n6X" secondAttribute="top" id="yUN-7u-tuv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BbM-0G-n6X"/>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="Qfk-uU-WjI" id="ql1-pO-j4Z"/>
+                        <outlet property="doneButtonViewHeight" destination="FEn-ej-gcl" id="pFs-au-DGR"/>
+                        <outlet property="newPostTableView" destination="eHA-Ua-6PO" id="DQc-JZ-sB6"/>
+                        <outlet property="shareBarButton" destination="4zV-0y-0dI" id="wbC-H9-Edx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tgw-RF-biR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3984.057971014493" y="971.65178571428567"/>
         </scene>
     </scenes>
     <resources>

@@ -51,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="486" y="827"/>
         </scene>
-        <!--NewPostNC-->
+        <!--NewNC-->
         <scene sceneID="YJQ-vW-efP">
             <objects>
-                <viewControllerPlaceholder storyboardName="NewPost" referencedIdentifier="NewPostNC" id="mcG-y1-AUz" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="NewPost" referencedIdentifier="NewNC" id="mcG-y1-AUz" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Aqi-M1-aAc"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HQl-wT-A7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
