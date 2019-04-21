@@ -17,6 +17,8 @@ class ProfileViewController: UIViewController {
     var uid = UserService.getCurrentUserID()
     var user = User()
     
+    var posts = [Post]()
+    
     // for header
     var headerIndexPath = IndexPath()
     
@@ -62,6 +64,7 @@ class ProfileViewController: UIViewController {
         }
         
         fetchUser()
+        fetchPosts()
         
         UserService.getUserOnce(with: uid) { (user, error) in
             if error != nil {
@@ -93,6 +96,19 @@ class ProfileViewController: UIViewController {
     }
     
     
+    func fetchPosts() {
+        PostService.fetchPosts(with: uid) { (posts, error) in
+            if error != nil {
+                print(error!)
+            }
+            else if posts != nil {
+                self.posts = posts!.reversed()
+                
+                self.profileCollectionView.reloadData()
+            }
+        }
+    }
+    
     
     
     // MARK: - UIActions
@@ -113,11 +129,17 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return posts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCollectionCell", for: indexPath) as! PostCollectionCell
+        
+        let post = posts[indexPath.row]
+        
+        if let thumbnailURL = post.thumbnail_url {
+            cell.postImageView.image = ImageService.getImageUsingCacheWithURL(urlString: thumbnailURL)
+        }
         
         return cell
     }

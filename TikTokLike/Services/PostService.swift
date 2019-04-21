@@ -22,6 +22,7 @@ class PostService {
                 
                 let post = Post()
                 
+                post.thumbnail_url = dictionary["thumbnail_url"] as? String
                 post.video_url = dictionary["video_url"] as? String
                 post.caption = dictionary["caption"] as? String
                 post.post_id = dictionary["post_id"] as? String
