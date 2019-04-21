@@ -144,6 +144,18 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
+        let storyboard = UIStoryboard(name: "Post", bundle: nil)
+        let postVC = storyboard.instantiateViewController(withIdentifier: "PostVC") as! PostViewController
+        if let videoURL = posts[indexPath.row].video_url, let uid = posts[indexPath.row].uid {
+            postVC.videoURL = URL(string: videoURL)
+            postVC.uid = uid
+        }
+        self.present(postVC, animated: true, completion: nil)
+    }
     
     
     // Header

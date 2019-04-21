@@ -28,6 +28,8 @@
 		827D9938226BD42500187144 /* VideoTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 827D9936226BD42500187144 /* VideoTableCell.xib */; };
 		827D993A226BD72500187144 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827D9939226BD72500187144 /* PostService.swift */; };
 		827D993C226BD75200187144 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827D993B226BD75200187144 /* Post.swift */; };
+		827D9980226CDCA200187144 /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827D997F226CDCA200187144 /* Post.storyboard */; };
+		827D9982226CDCD500187144 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827D9981226CDCD500187144 /* PostViewController.swift */; };
 		82B83880226A5DD5004622CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B8387F226A5DD5004622CD /* AppDelegate.swift */; };
 		82B83885226A5DD5004622CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B83883226A5DD5004622CD /* Main.storyboard */; };
 		82B83887226A5DD7004622CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82B83886226A5DD7004622CD /* Assets.xcassets */; };
@@ -102,6 +104,8 @@
 		827D9936226BD42500187144 /* VideoTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTableCell.xib; sourceTree = "<group>"; };
 		827D9939226BD72500187144 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		827D993B226BD75200187144 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		827D997F226CDCA200187144 /* Post.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
+		827D9981226CDCD500187144 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		82B8387C226A5DD5004622CD /* TikTokLike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTokLike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B8387F226A5DD5004622CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82B83884226A5DD5004622CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -264,6 +268,7 @@
 				827D991F226AF18600187144 /* CustomCameraViewController.swift */,
 				827D9921226AF19900187144 /* CapturePreviewViewController.swift */,
 				827D992B226BAE5700187144 /* AddUserViewController.swift */,
+				827D9981226CDCD500187144 /* PostViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 				82B838E6226ACB79004622CD /* EditProfile.storyboard */,
 				827D991D226AF12100187144 /* CustomCamera.storyboard */,
 				827D9929226BAE4000187144 /* AddUser.storyboard */,
+				827D997F226CDCA200187144 /* Post.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -467,6 +473,7 @@
 				82B838CF226A75B6004622CD /* GoogleService-Info.plist in Resources */,
 				82B83885226A5DD5004622CD /* Main.storyboard in Resources */,
 				82B838BF226A62CC004622CD /* Search.storyboard in Resources */,
+				827D9980226CDCA200187144 /* Post.storyboard in Resources */,
 				827D9930226BAFA100187144 /* UserTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -610,6 +617,7 @@
 				82B838B7226A600D004622CD /* NewViewController.swift in Sources */,
 				82B838E9226ACB95004622CD /* EditProfileViewController.swift in Sources */,
 				827D992C226BAE5700187144 /* AddUserViewController.swift in Sources */,
+				827D9982226CDCD500187144 /* PostViewController.swift in Sources */,
 				827D9932226BC13400187144 /* FollowService.swift in Sources */,
 				82B838D6226A92F4004622CD /* ProfileHeaderView.swift in Sources */,
 				827D9922226AF19900187144 /* CapturePreviewViewController.swift in Sources */,
