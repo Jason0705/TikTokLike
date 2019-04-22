@@ -56,7 +56,6 @@ class PostViewController: UIViewController {
             captionTextView.text = caption
         }
         
-        
         getUserProfilePhoto()
     }
     

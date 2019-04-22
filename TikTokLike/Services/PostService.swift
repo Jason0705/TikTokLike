@@ -44,4 +44,36 @@ class PostService {
     }
     
     
+    static func fetchOthersPosts(completion: @escaping ([Post]?, Error?) -> Void) {
+        
+        var posts = [Post]()
+        let uid = UserService.getCurrentUserID()
+        
+        Database.database().reference().child("posts").observe(.childAdded, with: { (snapshot) in
+            if let dictionary = snapshot.value as? [String: Any] {
+                
+                let post = Post()
+                
+                post.thumbnail_url = dictionary["thumbnail_url"] as? String
+                post.video_url = dictionary["video_url"] as? String
+                post.caption = dictionary["caption"] as? String
+                post.post_id = dictionary["post_id"] as? String
+                post.uid = dictionary["uid"] as? String
+                post.timestamp = dictionary["timestamp"] as? [AnyHashable: Any]
+                
+                if post.uid != nil && post.uid != uid {
+                    posts.append(post)
+                }
+                
+            }
+            
+            completion(posts, nil)
+            
+        }) { (error) in
+            completion(nil, error)
+        }
+        
+    }
+    
+    
 }

@@ -41,6 +41,10 @@
                                         </view>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="qjT-ZD-gjC" id="fw6-ro-kgY"/>
+                                    <outlet property="delegate" destination="qjT-ZD-gjC" id="lhu-ey-kRn"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -56,6 +60,9 @@
                         <viewLayoutGuide key="safeArea" id="EkL-37-2gd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="y3u-2V-M7Q"/>
+                    <connections>
+                        <outlet property="searchCollectionView" destination="0J1-xF-7D3" id="ORP-Kf-NZ1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9OO-ed-c5o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
