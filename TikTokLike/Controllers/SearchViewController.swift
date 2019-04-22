@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class SearchViewController: UIViewController {
 
@@ -19,6 +20,7 @@ class SearchViewController: UIViewController {
     
     // MARK: - IBOutlets
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchCollectionView: UICollectionView!
     
     
@@ -66,6 +68,19 @@ class SearchViewController: UIViewController {
         
     }
     
+    func fetchPosts(keyword: String) {
+        PostService.fetchOthersPosts(keyword: keyword) { (posts, error) in
+            if error != nil {
+                print(error)
+            }
+            else if posts != nil {
+                self.posts = posts!.reversed()
+                
+                self.searchCollectionView.reloadData()
+            }
+        }
+    }
+    
     
     
     // MARK: - IBActions
@@ -105,5 +120,32 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     
+    
+}
+
+
+// MARK: - UISearchBar Delegate
+
+extension SearchViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if searchBar.text?.count != 0 {
+            let searchInput = searchBar.text!
+            fetchPosts(keyword: searchInput)
+        }
+        self.view.endEditing(true)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        fetchPosts()
+        self.view.endEditing(true)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+            fetchPosts()
+        }
+    }
     
 }

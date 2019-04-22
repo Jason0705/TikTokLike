@@ -18,9 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="fgP-GH-OoE">
+                            <searchBar contentMode="redraw" placeholder="Seach Caption" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fgP-GH-OoE">
                                 <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="qjT-ZD-gjC" id="i4p-gf-USt"/>
+                                </connections>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0J1-xF-7D3">
                                 <rect key="frame" x="0.0" y="144" width="414" height="718"/>
@@ -61,6 +65,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="y3u-2V-M7Q"/>
                     <connections>
+                        <outlet property="searchBar" destination="fgP-GH-OoE" id="W5G-4x-MEi"/>
                         <outlet property="searchCollectionView" destination="0J1-xF-7D3" id="ORP-Kf-NZ1"/>
                     </connections>
                 </viewController>
