@@ -19,26 +19,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qKA-y5-Pav">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Pf1-TX-K1y" id="g45-Oi-Uxc"/>
                                     <outlet property="delegate" destination="Pf1-TX-K1y" id="bsM-e4-oss"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" placeholder="Email / User Name" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G3n-ky-ncT">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Pf1-TX-K1y" id="p2c-oe-Cda"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qKA-y5-Pav" firstAttribute="top" secondItem="A04-e1-WGm" secondAttribute="top" id="AN8-UZ-nIQ"/>
+                            <constraint firstItem="qKA-y5-Pav" firstAttribute="top" secondItem="G3n-ky-ncT" secondAttribute="bottom" id="38X-pr-ukE"/>
                             <constraint firstItem="A04-e1-WGm" firstAttribute="bottom" secondItem="qKA-y5-Pav" secondAttribute="bottom" id="Cfp-fF-JZM"/>
                             <constraint firstItem="A04-e1-WGm" firstAttribute="trailing" secondItem="qKA-y5-Pav" secondAttribute="trailing" id="Frf-q4-7vn"/>
+                            <constraint firstItem="G3n-ky-ncT" firstAttribute="leading" secondItem="A04-e1-WGm" secondAttribute="leading" id="ToS-7h-jmY"/>
                             <constraint firstItem="qKA-y5-Pav" firstAttribute="leading" secondItem="A04-e1-WGm" secondAttribute="leading" id="Vpv-4q-7Pa"/>
+                            <constraint firstItem="G3n-ky-ncT" firstAttribute="trailing" secondItem="A04-e1-WGm" secondAttribute="trailing" id="toW-ms-dR5"/>
+                            <constraint firstItem="G3n-ky-ncT" firstAttribute="top" secondItem="A04-e1-WGm" secondAttribute="top" id="w8T-FT-HnN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A04-e1-WGm"/>
                     </view>
                     <navigationItem key="navigationItem" title="Users" id="Bcl-l6-1Ck"/>
                     <connections>
                         <outlet property="addUserTableView" destination="qKA-y5-Pav" id="hvI-ay-S5g"/>
+                        <outlet property="searchBar" destination="G3n-ky-ncT" id="6oT-3H-DVH"/>
                         <segue destination="Gyo-PH-NBW" kind="show" identifier="addUserVCToProfileVC" id="RHD-9A-z3H"/>
                     </connections>
                 </viewController>

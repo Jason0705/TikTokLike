@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseAuth
 import FirebaseDatabase
+import SVProgressHUD
 
 class UserService {
     
@@ -26,7 +27,6 @@ class UserService {
     
     // Get user once
     static func getUserOnce(with uid: String, completion: @escaping (User?, Error?) -> Void) {
-        
         
         Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
             if let dictionary = snapshot.value as? [String: Any] {
@@ -84,6 +84,7 @@ class UserService {
         
         var users = [User]()
         
+        SVProgressHUD.show()
         Database.database().reference().child("users").observe(.childAdded, with: { (snapshot) in
             
             if let dictionary = snapshot.value as? [String: Any] {
@@ -107,10 +108,55 @@ class UserService {
                 }
             }
             
+            SVProgressHUD.dismiss()
             completion(users, nil)
             
             
         }) { (error) in
+            SVProgressHUD.dismiss()
+            completion(nil, error)
+        }
+        
+    }
+    
+    
+    
+    static func getUsersExceptSelf(keyword: String, completion: @escaping ([User]?, Error?) -> Void) {
+        
+        var users = [User]()
+        
+        SVProgressHUD.show()
+        Database.database().reference().child("users").observe(.childAdded, with: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: Any] {
+                let user = User()
+                
+                user.uid = dictionary["uid"] as? String
+                user.email = dictionary["email"] as? String
+                
+                user.profile_photo_url = dictionary["profile_photo_url"] as? String
+                
+                user.user_name = dictionary["user_name"] as? String
+                user.bio = dictionary["bio"] as? String
+                
+                user.followings = dictionary["followings"] as? [String]
+                user.followers = dictionary["followers"] as? [String]
+                
+                if let uid = user.uid {
+                    if uid != UserService.getCurrentUserID() {
+                        if user.email == keyword || user.user_name!.contains(keyword) {
+                            users.append(user)
+                        }
+                    }
+                }
+            }
+            
+            SVProgressHUD.dismiss()
+            completion(users, nil)
+            
+            
+        }) { (error) in
+            SVProgressHUD.dismiss()
             completion(nil, error)
         }
         

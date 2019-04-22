@@ -18,6 +18,7 @@ class AddUserViewController: UIViewController {
     
     // MARK: - IBOutlets
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var addUserTableView: UITableView!
     
     
@@ -30,7 +31,7 @@ class AddUserViewController: UIViewController {
         addUserTableView.register(UINib(nibName: "UserTableCell", bundle: nil), forCellReuseIdentifier: "userTableCell")
         
         
-        setUp()
+        fetchUsers()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -48,8 +49,7 @@ class AddUserViewController: UIViewController {
     
     // MARK: - Functions
     
-    func setUp() {
-        
+    func fetchUsers() {
         UserService.getUsersExceptSelf { (users, error) in
             if error != nil {
                 print(error)
@@ -61,8 +61,22 @@ class AddUserViewController: UIViewController {
                 self.addUserTableView.reloadData()
             }
         }
-        
     }
+    
+    func fetchUsers(keyword: String) {
+        UserService.getUsersExceptSelf(keyword: keyword) { (users, error) in
+            if error != nil {
+                print(error)
+            }
+            else if users != nil {
+                
+                self.users = users!
+                
+                self.addUserTableView.reloadData()
+            }
+        }
+    }
+    
 
 }
 
@@ -95,6 +109,33 @@ extension AddUserViewController: UITableViewDelegate, UITableViewDataSource {
         selectedIndexPath = indexPath
         
         performSegue(withIdentifier: "addUserVCToProfileVC", sender: self)
+    }
+    
+}
+
+
+// MARK: - UISearchBar Delegate
+
+extension AddUserViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if searchBar.text?.count != 0 {
+            let searchInput = searchBar.text!.lowercased()
+            fetchUsers(keyword: searchInput)
+        }
+        self.view.endEditing(true)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        fetchUsers()
+        self.view.endEditing(true)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+            fetchUsers()
+        }
     }
     
 }

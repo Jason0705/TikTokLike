@@ -54,7 +54,6 @@ class SearchViewController: UIViewController {
     
     
     func fetchPosts() {
-        
         PostService.fetchOthersPosts { (posts, error) in
             if error != nil {
                 print(error)
@@ -65,7 +64,6 @@ class SearchViewController: UIViewController {
                 self.searchCollectionView.reloadData()
             }
         }
-        
     }
     
     func fetchPosts(keyword: String) {
@@ -130,7 +128,7 @@ extension SearchViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if searchBar.text?.count != 0 {
-            let searchInput = searchBar.text!
+            let searchInput = searchBar.text!.lowercased()
             fetchPosts(keyword: searchInput)
         }
         self.view.endEditing(true)
