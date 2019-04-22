@@ -150,10 +150,9 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         
         let storyboard = UIStoryboard(name: "Post", bundle: nil)
         let postVC = storyboard.instantiateViewController(withIdentifier: "PostVC") as! PostViewController
-        if let videoURL = posts[indexPath.row].video_url, let uid = posts[indexPath.row].uid {
-            postVC.videoURL = URL(string: videoURL)
-            postVC.uid = uid
-        }
+        
+        postVC.post = posts[indexPath.row]
+        
         self.present(postVC, animated: true, completion: nil)
     }
     
@@ -178,6 +177,8 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
             if let userName = user.user_name {
                 headerView.userNameLabel.text = "@\(userName)"
             }
+            
+            headerView.videoCountLabel.text = "\(posts.count) videos"
             
             if let followings = user.followings {
                 headerView.followingCountLabel.text = "\(followings.count - 1)" // - 1 because followings in FollowService is initiated with a [""] placeholder. Whenever a user first have followings, the first of followings is "".

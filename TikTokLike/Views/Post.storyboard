@@ -23,7 +23,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DMN-T8-bBc">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Rm-gp-Bf4" userLabel="Close Button">
                                         <rect key="frame" x="16" y="60" width="44" height="44"/>
@@ -45,7 +45,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7R-KN-ZBn">
-                                        <rect key="frame" x="32" y="802" width="44" height="44"/>
+                                        <rect key="frame" x="32" y="740" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="qJn-7l-F1H"/>
                                             <constraint firstAttribute="height" constant="44" id="ude-bc-w1R"/>
@@ -56,6 +56,16 @@
                                             <action selector="audioButtonPressed:" destination="bGc-i2-54i" eventType="touchUpInside" id="4Q7-Fb-Tim"/>
                                         </connections>
                                     </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Caption" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYm-J5-R7t">
+                                        <rect key="frame" x="24" y="800" width="366" height="64"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="pHp-3M-PYK"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -65,10 +75,13 @@
                                     <constraint firstItem="3Rm-gp-Bf4" firstAttribute="top" secondItem="8DF-8K-8Ek" secondAttribute="top" constant="60" id="Qjh-mq-7N4"/>
                                     <constraint firstItem="bKr-5a-r0T" firstAttribute="top" secondItem="8DF-8K-8Ek" secondAttribute="top" constant="60" id="RBU-dC-5UN"/>
                                     <constraint firstItem="3Rm-gp-Bf4" firstAttribute="leading" secondItem="8DF-8K-8Ek" secondAttribute="leading" constant="16" id="UZ7-kM-uFc"/>
-                                    <constraint firstAttribute="bottom" secondItem="u7R-KN-ZBn" secondAttribute="bottom" constant="50" id="aol-7Z-Kcf"/>
+                                    <constraint firstAttribute="bottom" secondItem="UYm-J5-R7t" secondAttribute="bottom" constant="32" id="Vuq-6K-2gs"/>
+                                    <constraint firstItem="UYm-J5-R7t" firstAttribute="top" secondItem="u7R-KN-ZBn" secondAttribute="bottom" constant="16" id="fjD-GC-Pp9"/>
+                                    <constraint firstItem="u7R-KN-ZBn" firstAttribute="leading" secondItem="8DF-8K-8Ek" secondAttribute="leading" constant="32" id="gpV-0h-SIw"/>
                                     <constraint firstAttribute="trailing" secondItem="DMN-T8-bBc" secondAttribute="trailing" id="jfa-Bx-Bll"/>
+                                    <constraint firstAttribute="trailing" secondItem="UYm-J5-R7t" secondAttribute="trailing" constant="24" id="k4J-Yi-h3n"/>
+                                    <constraint firstItem="UYm-J5-R7t" firstAttribute="leading" secondItem="8DF-8K-8Ek" secondAttribute="leading" constant="24" id="uNo-UT-OjF"/>
                                     <constraint firstItem="DMN-T8-bBc" firstAttribute="top" secondItem="8DF-8K-8Ek" secondAttribute="top" id="wzj-Da-YmC"/>
-                                    <constraint firstItem="u7R-KN-ZBn" firstAttribute="leading" secondItem="8DF-8K-8Ek" secondAttribute="leading" constant="32" id="xJk-Uc-0XS"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -83,6 +96,7 @@
                     </view>
                     <connections>
                         <outlet property="audioButton" destination="u7R-KN-ZBn" id="BXJ-kL-4Q6"/>
+                        <outlet property="captionTextView" destination="UYm-J5-R7t" id="f1I-80-vDl"/>
                         <outlet property="closeButton" destination="3Rm-gp-Bf4" id="QCC-hz-GfT"/>
                         <outlet property="profileImageView" destination="bKr-5a-r0T" id="70r-My-Ykw"/>
                         <outlet property="videoView" destination="DMN-T8-bBc" id="qlP-uv-4ia"/>
