@@ -117,6 +117,8 @@ class UserService {
             completion(nil, error)
         }
         
+        SVProgressHUD.dismiss()
+        
     }
     
     
@@ -159,6 +161,8 @@ class UserService {
             SVProgressHUD.dismiss()
             completion(nil, error)
         }
+        
+        SVProgressHUD.dismiss()
         
         
     }

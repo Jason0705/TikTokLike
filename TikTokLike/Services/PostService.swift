@@ -45,6 +45,8 @@ class PostService {
             completion(nil, error)
         }
         
+        SVProgressHUD.dismiss()
+        
     }
     
     
@@ -79,6 +81,8 @@ class PostService {
             SVProgressHUD.dismiss()
             completion(nil, error)
         }
+        
+        SVProgressHUD.dismiss()
         
     }
     
@@ -116,6 +120,8 @@ class PostService {
             SVProgressHUD.dismiss()
             completion(nil, error)
         }
+        
+        SVProgressHUD.dismiss()
         
     }
     

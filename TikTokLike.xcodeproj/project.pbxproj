@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		49C57283833B9E08095C78E7 /* Pods_TikTokLike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF53C1F046C93CE4FDE35F5 /* Pods_TikTokLike.framework */; };
 		6A83E7257861912E7FB63F7A /* Pods_TikTokLikeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1579B5347D9F1A2478349200 /* Pods_TikTokLikeUITests.framework */; };
+		825C85DD226E41D400B5B397 /* WebPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C85DC226E41D400B5B397 /* WebPost.swift */; };
+		825C85DF226E42AC00B5B397 /* WebPostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C85DE226E42AC00B5B397 /* WebPostService.swift */; };
+		825C85E2226E7D4000B5B397 /* FeedTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C85E0226E7D4000B5B397 /* FeedTableCell.swift */; };
+		825C85E3226E7D4000B5B397 /* FeedTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 825C85E1226E7D4000B5B397 /* FeedTableCell.xib */; };
+		825C85E5226E821400B5B397 /* WebPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 825C85E4226E821400B5B397 /* WebPost.storyboard */; };
+		825C85E7226E82CA00B5B397 /* WebPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C85E6226E82CA00B5B397 /* WebPostViewController.swift */; };
 		827D9917226AD99E00187144 /* ImageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827D9915226AD99E00187144 /* ImageTableCell.swift */; };
 		827D9918226AD99E00187144 /* ImageTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 827D9916226AD99E00187144 /* ImageTableCell.xib */; };
 		827D991B226AD9BB00187144 /* InputTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827D9919226AD9BB00187144 /* InputTableCell.swift */; };
@@ -85,6 +91,12 @@
 
 /* Begin PBXFileReference section */
 		1579B5347D9F1A2478349200 /* Pods_TikTokLikeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTokLikeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		825C85DC226E41D400B5B397 /* WebPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPost.swift; sourceTree = "<group>"; };
+		825C85DE226E42AC00B5B397 /* WebPostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPostService.swift; sourceTree = "<group>"; };
+		825C85E0226E7D4000B5B397 /* FeedTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableCell.swift; sourceTree = "<group>"; };
+		825C85E1226E7D4000B5B397 /* FeedTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableCell.xib; sourceTree = "<group>"; };
+		825C85E4226E821400B5B397 /* WebPost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebPost.storyboard; sourceTree = "<group>"; };
+		825C85E6226E82CA00B5B397 /* WebPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPostViewController.swift; sourceTree = "<group>"; };
 		827D9915226AD99E00187144 /* ImageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableCell.swift; sourceTree = "<group>"; };
 		827D9916226AD99E00187144 /* ImageTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableCell.xib; sourceTree = "<group>"; };
 		827D9919226AD9BB00187144 /* InputTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTableCell.swift; sourceTree = "<group>"; };
@@ -269,6 +281,7 @@
 				827D9921226AF19900187144 /* CapturePreviewViewController.swift */,
 				827D992B226BAE5700187144 /* AddUserViewController.swift */,
 				827D9981226CDCD500187144 /* PostViewController.swift */,
+				825C85E6226E82CA00B5B397 /* WebPostViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -289,6 +302,7 @@
 				827D991D226AF12100187144 /* CustomCamera.storyboard */,
 				827D9929226BAE4000187144 /* AddUser.storyboard */,
 				827D997F226CDCA200187144 /* Post.storyboard */,
+				825C85E4226E821400B5B397 /* WebPost.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,6 +312,7 @@
 			children = (
 				82B838DC226AA1BE004622CD /* User.swift */,
 				827D993B226BD75200187144 /* Post.swift */,
+				825C85DC226E41D400B5B397 /* WebPost.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -313,6 +328,7 @@
 				827D9927226B0CE700187144 /* ImageService.swift */,
 				827D9931226BC13400187144 /* FollowService.swift */,
 				827D9939226BD72500187144 /* PostService.swift */,
+				825C85DE226E42AC00B5B397 /* WebPostService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -332,6 +348,8 @@
 				827D992E226BAFA100187144 /* UserTableCell.xib */,
 				827D9935226BD42500187144 /* VideoTableCell.swift */,
 				827D9936226BD42500187144 /* VideoTableCell.xib */,
+				825C85E0226E7D4000B5B397 /* FeedTableCell.swift */,
+				825C85E1226E7D4000B5B397 /* FeedTableCell.xib */,
 			);
 			path = "Cusstom Cells";
 			sourceTree = "<group>";
@@ -456,6 +474,7 @@
 			files = (
 				82B8388A226A5DD7004622CD /* LaunchScreen.storyboard in Resources */,
 				82B838DB226A9D6B004622CD /* PostCollectionCell.xib in Resources */,
+				825C85E3226E7D4000B5B397 /* FeedTableCell.xib in Resources */,
 				82B838C1226A644A004622CD /* NewPost.storyboard in Resources */,
 				82B838C5226A652B004622CD /* Profile.storyboard in Resources */,
 				82B838D7226A92F4004622CD /* ProfileHeaderView.xib in Resources */,
@@ -472,6 +491,7 @@
 				82B838C7226A6ABE004622CD /* Authentication.storyboard in Resources */,
 				82B838CF226A75B6004622CD /* GoogleService-Info.plist in Resources */,
 				82B83885226A5DD5004622CD /* Main.storyboard in Resources */,
+				825C85E5226E821400B5B397 /* WebPost.storyboard in Resources */,
 				82B838BF226A62CC004622CD /* Search.storyboard in Resources */,
 				827D9980226CDCA200187144 /* Post.storyboard in Resources */,
 				827D9930226BAFA100187144 /* UserTableCell.xib in Resources */,
@@ -604,8 +624,10 @@
 			files = (
 				827D991B226AD9BB00187144 /* InputTableCell.swift in Sources */,
 				82B838E5226ABC5A004622CD /* MenuViewController.swift in Sources */,
+				825C85E7226E82CA00B5B397 /* WebPostViewController.swift in Sources */,
 				82B838DA226A9D6B004622CD /* PostCollectionCell.swift in Sources */,
 				82B838D3226A81F3004622CD /* AlertService.swift in Sources */,
+				825C85DF226E42AC00B5B397 /* WebPostService.swift in Sources */,
 				82B838C9226A6ADC004622CD /* SignInViewController.swift in Sources */,
 				82B838BB226A607C004622CD /* ProfileViewController.swift in Sources */,
 				82B838CB226A6AEF004622CD /* SignUpViewController.swift in Sources */,
@@ -622,6 +644,7 @@
 				82B838D6226A92F4004622CD /* ProfileHeaderView.swift in Sources */,
 				827D9922226AF19900187144 /* CapturePreviewViewController.swift in Sources */,
 				82B838B9226A606C004622CD /* SocialViewController.swift in Sources */,
+				825C85DD226E41D400B5B397 /* WebPost.swift in Sources */,
 				827D9937226BD42500187144 /* VideoTableCell.swift in Sources */,
 				827D9928226B0CE700187144 /* ImageService.swift in Sources */,
 				827D993A226BD72500187144 /* PostService.swift in Sources */,
@@ -630,6 +653,7 @@
 				827D9924226AF70500187144 /* VideoService.swift in Sources */,
 				827D9917226AD99E00187144 /* ImageTableCell.swift in Sources */,
 				827D9934226BD13B00187144 /* NewPostViewController.swift in Sources */,
+				825C85E2226E7D4000B5B397 /* FeedTableCell.swift in Sources */,
 				82B838D1226A7B99004622CD /* UIService.swift in Sources */,
 				82B838B3226A5F9A004622CD /* FeedViewController.swift in Sources */,
 				82B83880226A5DD5004622CD /* AppDelegate.swift in Sources */,

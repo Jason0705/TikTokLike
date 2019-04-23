@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="feedTableCell" selectionStyle="default" indentationWidth="10" rowHeight="244" id="KGk-i7-Jjw" customClass="FeedTableCell" customModule="TikTokLike" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="244"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="243.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7N-fi-Otp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="243.5"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hb9-Tu-3dl">
+                                <rect key="frame" x="8" y="8" width="304" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="kkH-3q-PsK"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KoN-yT-vtW">
+                                <rect key="frame" x="8" y="64" width="304" height="171.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KoN-yT-vtW" firstAttribute="top" secondItem="Hb9-Tu-3dl" secondAttribute="bottom" constant="8" id="5yT-VQ-iPe"/>
+                            <constraint firstItem="Hb9-Tu-3dl" firstAttribute="leading" secondItem="g7N-fi-Otp" secondAttribute="leading" constant="8" id="I7M-7L-eXt"/>
+                            <constraint firstAttribute="trailing" secondItem="KoN-yT-vtW" secondAttribute="trailing" constant="8" id="hDK-zY-KgF"/>
+                            <constraint firstAttribute="bottom" secondItem="KoN-yT-vtW" secondAttribute="bottom" constant="8" id="hpp-Hl-OqL"/>
+                            <constraint firstAttribute="trailing" secondItem="Hb9-Tu-3dl" secondAttribute="trailing" constant="8" id="iN3-I9-WN1"/>
+                            <constraint firstItem="Hb9-Tu-3dl" firstAttribute="top" secondItem="g7N-fi-Otp" secondAttribute="top" constant="8" id="qBO-ZC-RSq"/>
+                            <constraint firstItem="KoN-yT-vtW" firstAttribute="leading" secondItem="g7N-fi-Otp" secondAttribute="leading" constant="8" id="sqI-KG-JxM"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="g7N-fi-Otp" secondAttribute="bottom" id="2JB-0d-KjN"/>
+                    <constraint firstItem="g7N-fi-Otp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ur8-F6-L1K"/>
+                    <constraint firstAttribute="trailing" secondItem="g7N-fi-Otp" secondAttribute="trailing" id="jwE-rd-gFV"/>
+                    <constraint firstItem="g7N-fi-Otp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="vRM-YG-AG1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="thumbnailImageView" destination="KoN-yT-vtW" id="s0L-xS-3i0"/>
+                <outlet property="titleTextView" destination="Hb9-Tu-3dl" id="mIO-hd-Ezs"/>
+            </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="230.28485757121442"/>
+        </tableViewCell>
+    </objects>
+</document>

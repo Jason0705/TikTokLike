@@ -34,6 +34,9 @@ class VideoTableCell: UITableViewCell {
         
     }
     
+    
+    // MARK: - Functions
+    
     func audioControl() {
         if audioButton.tag == 0 { // audio off
             audioButton.tag = 1
