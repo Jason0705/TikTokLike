@@ -12,6 +12,7 @@ protocol ProfileHeaderViewProtocol {
     func editProfile()
     func followAction()
     func unfollowAction()
+    func messageAction()
 }
 
 class ProfileHeaderView: UICollectionReusableView {
@@ -67,5 +68,8 @@ class ProfileHeaderView: UICollectionReusableView {
         delegate?.unfollowAction()
     }
     
+    @IBAction func messageButtonPressed(_ sender: UIButton) {
+        delegate?.messageAction()
+    }
     
 }

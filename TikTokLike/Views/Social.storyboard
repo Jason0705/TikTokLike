@@ -13,18 +13,46 @@
         <!--Social-->
         <scene sceneID="Zym-KS-YaQ">
             <objects>
-                <viewController storyboardIdentifier="SocialVC" id="WmE-BD-1X3" customClass="ChatsViewController" customModule="TikTokLike" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SocialVC" id="WmE-BD-1X3" customClass="SocialViewController" customModule="TikTokLike" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WYY-8I-Ha1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j7g-N1-I7d">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="WmE-BD-1X3" id="Bbk-if-uoB"/>
+                                    <outlet property="delegate" destination="WmE-BD-1X3" id="btZ-8a-avd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="j7g-N1-I7d" firstAttribute="leading" secondItem="sCa-WQ-uVR" secondAttribute="leading" id="4JY-ry-lJ1"/>
+                            <constraint firstItem="sCa-WQ-uVR" firstAttribute="trailing" secondItem="j7g-N1-I7d" secondAttribute="trailing" id="7lY-3u-x5F"/>
+                            <constraint firstItem="sCa-WQ-uVR" firstAttribute="bottom" secondItem="j7g-N1-I7d" secondAttribute="bottom" id="HE5-Td-8Lw"/>
+                            <constraint firstItem="j7g-N1-I7d" firstAttribute="top" secondItem="sCa-WQ-uVR" secondAttribute="top" id="iBE-ck-6cg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="sCa-WQ-uVR"/>
                     </view>
                     <navigationItem key="navigationItem" title="Social" id="25B-Kf-3ds"/>
+                    <connections>
+                        <outlet property="socialTableView" destination="j7g-N1-I7d" id="rRC-OA-LQ0"/>
+                        <segue destination="GCM-av-oWu" kind="show" identifier="socialVCToChatVC" id="bAC-Nx-DlO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOQ-AI-QAu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2044.9275362318842" y="1645.9821428571429"/>
+        </scene>
+        <!--ChatVC-->
+        <scene sceneID="WpJ-82-osk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" referencedIdentifier="ChatVC" id="GCM-av-oWu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rot-5i-g3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2749" y="1646"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hbM-GA-wv2">

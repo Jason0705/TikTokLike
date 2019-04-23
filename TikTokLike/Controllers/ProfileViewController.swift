@@ -17,6 +17,8 @@ class ProfileViewController: UIViewController {
     var uid = UserService.getCurrentUserID()
     var user = User()
     
+    var following: Bool!
+    
     var posts = [Post]()
     
     // for header
@@ -49,6 +51,14 @@ class ProfileViewController: UIViewController {
         defaults.set(4, forKey: "SelectedTabBar") // set last selected tab to 4
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "profileVCToChatVC" {
+            let destinationVC = segue.destination as! ChatViewController
+            
+            destinationVC.uid = uid
+        }
+    }
+    
     
     // MARK: Functions
     
@@ -74,6 +84,8 @@ class ProfileViewController: UIViewController {
                 self.navigationItem.title = user!.user_name // change navbar title to userName
             }
         }
+        
+        following = FollowService.isFollowingUser(of: uid)
         
         profileCollectionView.collectionViewLayout = UIService.threeCellPerRowStyle(view: self.view, lineSpacing: 2, itemSpacing: 2, inset: 0, heightMultiplier: 1)
     }
@@ -196,7 +208,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
                 headerView.editProfileButton.isHidden = true // hide edit profile button
                 
                 if let uid = user.uid {
-                    let following = FollowService.isFollowingUser(of: uid)
+//                    let following = FollowService.isFollowingUser(of: uid)
                     
                     if following { // following, show message & unfollow buttons
                         headerView.followButton.isHidden = true
@@ -250,6 +262,10 @@ extension ProfileViewController: ProfileHeaderViewProtocol {
     func unfollowAction() {
         FollowService.unfollowUser(of: uid)
         profileCollectionView.reloadData()
+    }
+    
+    func messageAction() {
+        performSegue(withIdentifier: "profileVCToChatVC", sender: nil)
     }
 
 }

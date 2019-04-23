@@ -17,10 +17,10 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1r-nA-QZ5" userLabel="Container View">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="356.5"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="315.5"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tWt-rw-Qu0">
-                            <rect key="frame" x="16" y="16" width="288" height="324.5"/>
+                            <rect key="frame" x="16" y="16" width="288" height="283.5"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="g7i-zI-WCj">
                                     <rect key="frame" x="94" y="0.0" width="100" height="100"/>
@@ -99,16 +99,19 @@
                                         <action selector="followButtonPressed:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="Cdo-i7-5Sp"/>
                                     </connections>
                                 </button>
-                                <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="QFt-0r-dn8" userLabel="Message Unfollow Stack View">
-                                    <rect key="frame" x="64" y="291.5" width="160" height="33"/>
+                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="QFt-0r-dn8" userLabel="Message Unfollow Stack View">
+                                    <rect key="frame" x="64" y="283.5" width="160" height="0.0"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hvz-dQ-DfW">
-                                            <rect key="frame" x="0.0" y="0.0" width="69" height="33"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="69" height="0.0"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <state key="normal" title="Message"/>
+                                            <connections>
+                                                <action selector="messageButtonPressed:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="d3t-4A-UZf"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvp-9b-XY4">
-                                            <rect key="frame" x="93" y="0.0" width="67" height="33"/>
+                                            <rect key="frame" x="93" y="0.0" width="67" height="0.0"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <state key="normal" title="Unfollow"/>
                                             <connections>
@@ -120,7 +123,7 @@
                             </subviews>
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KqA-qL-Xsr">
-                            <rect key="frame" x="0.0" y="355.5" width="320" height="1"/>
+                            <rect key="frame" x="0.0" y="314.5" width="320" height="1"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="hNT-6S-DEh"/>

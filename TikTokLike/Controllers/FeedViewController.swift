@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import FirebaseAuth
-import SVProgressHUD
 
 class FeedViewController: UIViewController {
 
@@ -34,7 +32,7 @@ class FeedViewController: UIViewController {
         // Register Cell.xib
         feedTableView.register(UINib(nibName: "FeedTableCell", bundle: nil), forCellReuseIdentifier: "feedTableCell")
         
-        fetchWebPosts()
+//        fetchWebPosts()
         
         feedWebView.loadRequest(URLRequest(url: baseURL!))
         

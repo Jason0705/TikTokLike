@@ -15,6 +15,11 @@
 		825C85E3226E7D4000B5B397 /* FeedTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 825C85E1226E7D4000B5B397 /* FeedTableCell.xib */; };
 		825C85E5226E821400B5B397 /* WebPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 825C85E4226E821400B5B397 /* WebPost.storyboard */; };
 		825C85E7226E82CA00B5B397 /* WebPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C85E6226E82CA00B5B397 /* WebPostViewController.swift */; };
+		825C85E9226E978400B5B397 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 825C85E8226E978400B5B397 /* Chat.storyboard */; };
+		825C85EB226E979E00B5B397 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C85EA226E979E00B5B397 /* ChatViewController.swift */; };
+		825C85EF226E9D2C00B5B397 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C85EE226E9D2C00B5B397 /* Message.swift */; };
+		825C85F2226EC7F000B5B397 /* MessageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C85F0226EC7F000B5B397 /* MessageTableCell.swift */; };
+		825C85F3226EC7F000B5B397 /* MessageTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 825C85F1226EC7F000B5B397 /* MessageTableCell.xib */; };
 		827D9917226AD99E00187144 /* ImageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827D9915226AD99E00187144 /* ImageTableCell.swift */; };
 		827D9918226AD99E00187144 /* ImageTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 827D9916226AD99E00187144 /* ImageTableCell.xib */; };
 		827D991B226AD9BB00187144 /* InputTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827D9919226AD9BB00187144 /* InputTableCell.swift */; };
@@ -97,6 +102,11 @@
 		825C85E1226E7D4000B5B397 /* FeedTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableCell.xib; sourceTree = "<group>"; };
 		825C85E4226E821400B5B397 /* WebPost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebPost.storyboard; sourceTree = "<group>"; };
 		825C85E6226E82CA00B5B397 /* WebPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPostViewController.swift; sourceTree = "<group>"; };
+		825C85E8226E978400B5B397 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		825C85EA226E979E00B5B397 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		825C85EE226E9D2C00B5B397 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		825C85F0226EC7F000B5B397 /* MessageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableCell.swift; sourceTree = "<group>"; };
+		825C85F1226EC7F000B5B397 /* MessageTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableCell.xib; sourceTree = "<group>"; };
 		827D9915226AD99E00187144 /* ImageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableCell.swift; sourceTree = "<group>"; };
 		827D9916226AD99E00187144 /* ImageTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableCell.xib; sourceTree = "<group>"; };
 		827D9919226AD9BB00187144 /* InputTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTableCell.swift; sourceTree = "<group>"; };
@@ -282,6 +292,7 @@
 				827D992B226BAE5700187144 /* AddUserViewController.swift */,
 				827D9981226CDCD500187144 /* PostViewController.swift */,
 				825C85E6226E82CA00B5B397 /* WebPostViewController.swift */,
+				825C85EA226E979E00B5B397 /* ChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -303,6 +314,7 @@
 				827D9929226BAE4000187144 /* AddUser.storyboard */,
 				827D997F226CDCA200187144 /* Post.storyboard */,
 				825C85E4226E821400B5B397 /* WebPost.storyboard */,
+				825C85E8226E978400B5B397 /* Chat.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -313,6 +325,7 @@
 				82B838DC226AA1BE004622CD /* User.swift */,
 				827D993B226BD75200187144 /* Post.swift */,
 				825C85DC226E41D400B5B397 /* WebPost.swift */,
+				825C85EE226E9D2C00B5B397 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -350,6 +363,8 @@
 				827D9936226BD42500187144 /* VideoTableCell.xib */,
 				825C85E0226E7D4000B5B397 /* FeedTableCell.swift */,
 				825C85E1226E7D4000B5B397 /* FeedTableCell.xib */,
+				825C85F0226EC7F000B5B397 /* MessageTableCell.swift */,
+				825C85F1226EC7F000B5B397 /* MessageTableCell.xib */,
 			);
 			path = "Cusstom Cells";
 			sourceTree = "<group>";
@@ -478,6 +493,7 @@
 				82B838C1226A644A004622CD /* NewPost.storyboard in Resources */,
 				82B838C5226A652B004622CD /* Profile.storyboard in Resources */,
 				82B838D7226A92F4004622CD /* ProfileHeaderView.xib in Resources */,
+				825C85E9226E978400B5B397 /* Chat.storyboard in Resources */,
 				827D992A226BAE4000187144 /* AddUser.storyboard in Resources */,
 				82B83887226A5DD7004622CD /* Assets.xcassets in Resources */,
 				82B838E3226ABBA9004622CD /* Menu.storyboard in Resources */,
@@ -494,6 +510,7 @@
 				825C85E5226E821400B5B397 /* WebPost.storyboard in Resources */,
 				82B838BF226A62CC004622CD /* Search.storyboard in Resources */,
 				827D9980226CDCA200187144 /* Post.storyboard in Resources */,
+				825C85F3226EC7F000B5B397 /* MessageTableCell.xib in Resources */,
 				827D9930226BAFA100187144 /* UserTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -629,6 +646,7 @@
 				82B838D3226A81F3004622CD /* AlertService.swift in Sources */,
 				825C85DF226E42AC00B5B397 /* WebPostService.swift in Sources */,
 				82B838C9226A6ADC004622CD /* SignInViewController.swift in Sources */,
+				825C85EF226E9D2C00B5B397 /* Message.swift in Sources */,
 				82B838BB226A607C004622CD /* ProfileViewController.swift in Sources */,
 				82B838CB226A6AEF004622CD /* SignUpViewController.swift in Sources */,
 				82B838CD226A7467004622CD /* AuthService.swift in Sources */,
@@ -653,9 +671,11 @@
 				827D9924226AF70500187144 /* VideoService.swift in Sources */,
 				827D9917226AD99E00187144 /* ImageTableCell.swift in Sources */,
 				827D9934226BD13B00187144 /* NewPostViewController.swift in Sources */,
+				825C85F2226EC7F000B5B397 /* MessageTableCell.swift in Sources */,
 				825C85E2226E7D4000B5B397 /* FeedTableCell.swift in Sources */,
 				82B838D1226A7B99004622CD /* UIService.swift in Sources */,
 				82B838B3226A5F9A004622CD /* FeedViewController.swift in Sources */,
+				825C85EB226E979E00B5B397 /* ChatViewController.swift in Sources */,
 				82B83880226A5DD5004622CD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
