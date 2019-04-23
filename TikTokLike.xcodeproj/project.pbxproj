@@ -13,8 +13,6 @@
 		825C85DF226E42AC00B5B397 /* WebPostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C85DE226E42AC00B5B397 /* WebPostService.swift */; };
 		825C85E2226E7D4000B5B397 /* FeedTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C85E0226E7D4000B5B397 /* FeedTableCell.swift */; };
 		825C85E3226E7D4000B5B397 /* FeedTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 825C85E1226E7D4000B5B397 /* FeedTableCell.xib */; };
-		825C85E5226E821400B5B397 /* WebPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 825C85E4226E821400B5B397 /* WebPost.storyboard */; };
-		825C85E7226E82CA00B5B397 /* WebPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C85E6226E82CA00B5B397 /* WebPostViewController.swift */; };
 		825C85E9226E978400B5B397 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 825C85E8226E978400B5B397 /* Chat.storyboard */; };
 		825C85EB226E979E00B5B397 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C85EA226E979E00B5B397 /* ChatViewController.swift */; };
 		825C85EF226E9D2C00B5B397 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825C85EE226E9D2C00B5B397 /* Message.swift */; };
@@ -100,8 +98,6 @@
 		825C85DE226E42AC00B5B397 /* WebPostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPostService.swift; sourceTree = "<group>"; };
 		825C85E0226E7D4000B5B397 /* FeedTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableCell.swift; sourceTree = "<group>"; };
 		825C85E1226E7D4000B5B397 /* FeedTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableCell.xib; sourceTree = "<group>"; };
-		825C85E4226E821400B5B397 /* WebPost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebPost.storyboard; sourceTree = "<group>"; };
-		825C85E6226E82CA00B5B397 /* WebPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPostViewController.swift; sourceTree = "<group>"; };
 		825C85E8226E978400B5B397 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		825C85EA226E979E00B5B397 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		825C85EE226E9D2C00B5B397 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -291,7 +287,6 @@
 				827D9921226AF19900187144 /* CapturePreviewViewController.swift */,
 				827D992B226BAE5700187144 /* AddUserViewController.swift */,
 				827D9981226CDCD500187144 /* PostViewController.swift */,
-				825C85E6226E82CA00B5B397 /* WebPostViewController.swift */,
 				825C85EA226E979E00B5B397 /* ChatViewController.swift */,
 			);
 			path = Controllers;
@@ -313,7 +308,6 @@
 				827D991D226AF12100187144 /* CustomCamera.storyboard */,
 				827D9929226BAE4000187144 /* AddUser.storyboard */,
 				827D997F226CDCA200187144 /* Post.storyboard */,
-				825C85E4226E821400B5B397 /* WebPost.storyboard */,
 				825C85E8226E978400B5B397 /* Chat.storyboard */,
 			);
 			path = Views;
@@ -507,7 +501,6 @@
 				82B838C7226A6ABE004622CD /* Authentication.storyboard in Resources */,
 				82B838CF226A75B6004622CD /* GoogleService-Info.plist in Resources */,
 				82B83885226A5DD5004622CD /* Main.storyboard in Resources */,
-				825C85E5226E821400B5B397 /* WebPost.storyboard in Resources */,
 				82B838BF226A62CC004622CD /* Search.storyboard in Resources */,
 				827D9980226CDCA200187144 /* Post.storyboard in Resources */,
 				825C85F3226EC7F000B5B397 /* MessageTableCell.xib in Resources */,
@@ -641,7 +634,6 @@
 			files = (
 				827D991B226AD9BB00187144 /* InputTableCell.swift in Sources */,
 				82B838E5226ABC5A004622CD /* MenuViewController.swift in Sources */,
-				825C85E7226E82CA00B5B397 /* WebPostViewController.swift in Sources */,
 				82B838DA226A9D6B004622CD /* PostCollectionCell.swift in Sources */,
 				82B838D3226A81F3004622CD /* AlertService.swift in Sources */,
 				825C85DF226E42AC00B5B397 /* WebPostService.swift in Sources */,

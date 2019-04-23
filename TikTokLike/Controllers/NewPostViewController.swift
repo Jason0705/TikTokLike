@@ -22,8 +22,9 @@ class NewPostViewController: UIViewController {
     let defaults = UserDefaults.standard
     
     var selectedIndexPath = IndexPath(row: 0, section: 0)
-    var selectedVideoURL: URL? // save to firebase/storage
+    var selectedVideoURL: URL? // save to firebase/storage 
     var caption = "" // save to firebase/storage
+    
     
     // MARK: - IBOutlets
     
@@ -44,6 +45,13 @@ class NewPostViewController: UIViewController {
         // Set UI State
         setUp()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        newPostTableView.reloadData()
+    }
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         doneButtonViewState(state: 0)
     }
@@ -56,19 +64,8 @@ class NewPostViewController: UIViewController {
         doneButton.isHidden = true
         newPostTableView.separatorStyle = .none
         
-        updateShareBarButton()
-        
-        newPostTableView.reloadData()
     }
     
-    func updateShareBarButton() {
-        if selectedVideoURL != nil {
-            shareBarButton.isEnabled = true
-        }
-        else {
-            shareBarButton.isEnabled = false
-        }
-    }
     
     func doneButtonViewState(state: Int){
         UIView.animate(withDuration: 0.225) {
@@ -100,7 +97,6 @@ class NewPostViewController: UIViewController {
             self.selectedVideoURL = nil
             self.caption = ""
             self.newPostTableView.reloadData()
-            self.updateShareBarButton()
             //            self.defaults.set(0, forKey: "NewPostSaved")
             //self.tabBarController?.selectedIndex = self.defaults.integer(forKey: "SelectedTabBar")
             self.presentingViewController?.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
@@ -196,7 +192,6 @@ class NewPostViewController: UIViewController {
             self.selectedVideoURL = nil
             self.caption = ""
             self.newPostTableView.reloadData()
-            self.updateShareBarButton()
             //            self.defaults.set(1, forKey: "NewPostSaved")
             //self.tabBarController?.selectedIndex = self.defaults.integer(forKey: "SelectedTabBar")
             self.presentingViewController?.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
@@ -307,7 +302,6 @@ extension NewPostViewController: UITableViewDelegate, UITableViewDataSource {
 extension NewPostViewController: InputTableCellProtocol {
     func infoCellContentReceived(content: String) {
         caption = content
-        updateShareBarButton()
     }
     
     

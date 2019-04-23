@@ -26,24 +26,26 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="320.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zn-Lt-48b">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGo-tP-t9L">
                                 <rect key="frame" x="8" y="268.5" width="44" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="44" id="C6b-sQ-qR7"/>
-                                    <constraint firstAttribute="height" constant="44" id="una-Ip-N7o"/>
+                                    <constraint firstAttribute="width" constant="44" id="qGs-T1-Knj"/>
+                                    <constraint firstAttribute="height" constant="44" id="vlc-NF-ISd"/>
                                 </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="audio_off"/>
+                                <connections>
+                                    <action selector="audioButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="VKs-Bq-XYE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8Zn-Lt-48b" firstAttribute="leading" secondItem="wKy-SW-lfe" secondAttribute="leading" constant="8" id="7Yi-nm-0xQ"/>
                             <constraint firstAttribute="bottom" secondItem="lGh-Kv-2CH" secondAttribute="bottom" id="CI8-aP-612"/>
                             <constraint firstAttribute="trailing" secondItem="lGh-Kv-2CH" secondAttribute="trailing" id="dfy-e2-LLR"/>
+                            <constraint firstAttribute="bottom" secondItem="oGo-tP-t9L" secondAttribute="bottom" constant="8" id="dmp-gM-EZM"/>
+                            <constraint firstItem="oGo-tP-t9L" firstAttribute="leading" secondItem="wKy-SW-lfe" secondAttribute="leading" constant="8" id="g9f-hT-gHA"/>
                             <constraint firstItem="lGh-Kv-2CH" firstAttribute="leading" secondItem="wKy-SW-lfe" secondAttribute="leading" id="joQ-JO-uFR"/>
                             <constraint firstItem="lGh-Kv-2CH" firstAttribute="top" secondItem="wKy-SW-lfe" secondAttribute="top" id="kNB-yq-P6c"/>
-                            <constraint firstAttribute="bottom" secondItem="8Zn-Lt-48b" secondAttribute="bottom" constant="8" id="omO-cn-oGC"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -59,7 +61,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="audioButton" destination="8Zn-Lt-48b" id="NdA-u3-Y7Z"/>
+                <outlet property="audioButton" destination="oGo-tP-t9L" id="XPT-yt-eYL"/>
                 <outlet property="videoContainerView" destination="wKy-SW-lfe" id="Dc0-tx-POv"/>
                 <outlet property="videoPreviewView" destination="lGh-Kv-2CH" id="zXi-Ic-DHV"/>
             </connections>

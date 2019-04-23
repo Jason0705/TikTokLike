@@ -37,22 +37,34 @@ class VideoTableCell: UITableViewCell {
     
     // MARK: - Functions
     
-    func audioControl() {
-        if audioButton.tag == 0 { // audio off
-            audioButton.tag = 1
-            delegate?.audioOn()
-            audioButton.setImage(UIImage(named: "audio_on"), for: .normal)
-        }
-        else if audioButton.tag == 1 { // aduio on
-            audioButton.tag = 0
-            delegate?.audioOff()
-            audioButton.setImage(UIImage(named: "audio_off"), for: .normal)
-        }
-    }
+//    func audioControl() {
+//        if audioButton.tag == 0 { // audio off
+//            audioButton.tag = 1
+//            delegate?.audioOn()
+//            audioButton.setImage(UIImage(named: "audio_on"), for: .normal)
+//        }
+//        else if audioButton.tag == 1 { // aduio on
+//            audioButton.tag = 0
+//            delegate?.audioOff()
+//            audioButton.setImage(UIImage(named: "audio_off"), for: .normal)
+//        }
+//    }
     
     
     @IBAction func audioButtonPressed(_ sender: UIButton) {
-        audioControl()
+        
+        if sender.tag == 0 {
+            sender.tag = 1
+            delegate?.audioOn()
+            audioButton.setImage(UIImage(named: "audio_on"), for: .normal)
+        }
+        else if sender.tag == 1 {
+            sender.tag = 0
+            delegate?.audioOff()
+            audioButton.setImage(UIImage(named: "audio_off"), for: .normal)
+        }
+        
+//        audioControl()
     }
     
 }
